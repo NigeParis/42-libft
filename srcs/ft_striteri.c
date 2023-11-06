@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 08:56:38 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/06 17:52:50 by nrobinso         ###   ########.fr       */
+/*   Created: 2023/11/06 17:14:50 by nrobinso          #+#    #+#             */
+/*   Updated: 2023/11/06 17:27:01 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/*
 #include "../includes/libft.h"
 
-int	main(void)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (ft_islower('y'))
-		ft_putchar('X');
-	return (0);
-}
+
+
+
+
+}*/
