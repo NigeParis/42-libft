@@ -1,0 +1,6 @@
+# ignore ALL .o files
+*.o
+# ignore file exec plusminus
+output
+# ignore file .DS_Store
+.DS_Store
