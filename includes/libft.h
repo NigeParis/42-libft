@@ -6,7 +6,7 @@
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:19:06 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/06 18:07:54 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/07 13:53:58 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,13 @@
 
 # include <unistd.h>
 
-int 	ft_islower (int c); 
+int 	ft_islower(int c); 
+int 	ft_isupper(int c); 
+int 	ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr(char *str);

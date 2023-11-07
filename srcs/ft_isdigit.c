@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 17:45:03 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/07 15:24:41 by nrobinso         ###   ########.fr       */
+/*   Created: 2023/11/07 10:36:48 by nrobinso          #+#    #+#             */
+/*   Updated: 2023/11/07 15:16:29 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 /**
-* #include <ctype.h>
+*   #include <ctype.h>
+* 	isdigit - int isdigit(int c);
 *
-* islower() -  int islower(int c);
-*              checks for a lowercase character.
-* RETURN VALUE
-*       The  values returned are nonzero if the character 
-*		c falls into the tested class,
-*       and zero if not.
+* 	RETURN VALUE
+*		The  values returned are nonzero 
+*		if the character c falls into the tested class,
+*		and zero if not.
 **/
 
 #include "../includes/libft.h"
 
-int	ft_islower(int c)
+int	ft_isdigit(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (512);
+	if (c >= '0' && c <= '9')
+		return (2048);
 	return (0);
 }

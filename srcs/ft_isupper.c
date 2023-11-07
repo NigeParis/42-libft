@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 17:45:03 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/07 15:24:41 by nrobinso         ###   ########.fr       */
+/*   Created: 2023/11/07 09:29:29 by nrobinso          #+#    #+#             */
+/*   Updated: 2023/11/07 16:02:43 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 /**
+*
 * #include <ctype.h>
 *
-* islower() -  int islower(int c);
-*              checks for a lowercase character.
+* isupper - int isupper(int c);
+*
+* checks for an uppercase letter.
+*
 * RETURN VALUE
-*       The  values returned are nonzero if the character 
-*		c falls into the tested class,
+*   	The  values returned are nonzero 
+*		if the character c falls into the tested class,
 *       and zero if not.
+*
 **/
 
 #include "../includes/libft.h"
 
-int	ft_islower(int c)
+int	ft_isupper(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (512);
-	return (0);
+	return (c >= 'A' && c <= 'Z');
 }
