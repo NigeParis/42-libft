@@ -6,11 +6,11 @@
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 10:12:26 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/04 10:30:15 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/08 09:45:37 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_putstr(char *str)
 {

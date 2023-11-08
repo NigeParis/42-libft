@@ -15,13 +15,14 @@ SRC_OBJ=$(addprefix $(OBJ_DIR), $(OBJ))
 ###############################################################################
 ## SOURCES 
 
-SRC_DIR=srcs/
+SRC_DIR=
 OBJ_DIR=objs/
-INCLUDE=includes/
+INCLUDE=../includes/
 SRC=ft_putchar.c ft_putstr.c ft_putchar_fd.c
 SRC+=ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_striteri.c
 SRC+=ft_islower.c ft_isupper.c ft_isalpha.c ft_isdigit.c ft_isalnum.c
-SRC+=ft_isascii.c ft_isprint.c ft_strlen.c
+SRC+=ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c
+SRC+=ft_memcpy.c ft_memmove.c
 HEADER=libft.h
 MAIN=main_test
 
@@ -39,8 +40,8 @@ $(NAME): $(OBJ)
 #	ar -rcs $(EXEC) $(OBJ)
 $(OBJ):
 	@echo "\nCOMPILE all c files to .o FILES .......\n"
-	$(CC) $(CFLAGS) -c $(SRCS) -I $(HEAD)
-	$(CC) $(CFLAGS) -c $(MAIN_SRC).c -I$(HEAD) -o $(MAIN_OBJ).o
+	$(CC) $(CFLAGS) -c -g $(SRCS) -I $(HEAD)
+	$(CC) $(CFLAGS) -c -g $(MAIN_SRC).c -I$(HEAD) -o $(MAIN_OBJ).o
 
 clean:
 	rm -f $(SRC_OBJ) $(MAIN_OBJ).o *.o

@@ -6,7 +6,7 @@
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:45:03 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/07 15:24:41 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/08 09:42:49 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -20,7 +20,7 @@
 *       and zero if not.
 **/
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int	ft_islower(int c)
 {

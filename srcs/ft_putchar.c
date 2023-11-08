@@ -6,11 +6,11 @@
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:01:02 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/06 15:03:54 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/08 09:44:05 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_putchar(char c)
 {

@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 12:12:46 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/08 09:42:14 by nrobinso         ###   ########.fr       */
+/*   Created: 2023/11/08 11:59:08 by nrobinso          #+#    #+#             */
+/*   Updated: 2023/11/08 13:00:24 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
-* #include <ctype.h>
+* #include <strings.h>
 *
-* isacii  -   int isascii(int c);
+* ft_bzero  -  void ft_bzero(void *s, size_t n);
 *
-* isascii()
-*	checks whether c is a 7-bit unsigned char value that  fits  into
-*	the ASCII character set.
+* The bzero() function erases the data in the n bytes of the memory 
+* starting at the location pointed to by s, 
+* by writing zeros (bytes containing '\0') to that area.
 *
 * RETURN VALUE
-*	The  values  returned  are  nonzero  if  the character c falls into the
-*	tested class, and zero if not.
-*/
+*       None.
+**/
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	return (c >= 0 && c <= 127);
+	ft_memset(s, 0, n);
 }

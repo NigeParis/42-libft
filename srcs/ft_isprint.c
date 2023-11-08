@@ -6,7 +6,7 @@
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:52:23 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/07 21:49:31 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/08 09:43:06 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -22,7 +22,7 @@
 *	if  the character c falls into the tested class, and zero if not.
 **/
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int ft_isprint(int c)
 {

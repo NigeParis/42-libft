@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 21:56:57 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/07 22:54:31 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/08 09:46:28 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -23,7 +23,6 @@
 * same result as strlen() or maxlen, whichever is smaller.
 **/
 
-#include "../includes/libft.h"
 #include "libft.h"
 
 size_t ft_strlen(const char *s)

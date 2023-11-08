@@ -6,7 +6,7 @@
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 09:29:29 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/07 16:02:43 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/08 09:43:25 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 *
 **/
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int	ft_isupper(int c)
 {
