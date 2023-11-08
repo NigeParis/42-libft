@@ -6,7 +6,7 @@
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 08:56:38 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/08 18:22:58 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/08 22:32:00 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -278,37 +278,81 @@ int	main(void)
 	loop = 0;
 */
 
-
-printf("\n=================== ft_ft_memcpy check ========================\n");
-
-char str[] = "#$rrrdddqW!@@!";
-char *copy = NULL;
-char *ptr_copy = NULL;
-char *ptr2_copy = NULL;
-char *ftcopy = NULL;
-int	str_size = 10;
-
-
-ptr_copy = memcpy(copy, str, str_size);
-ptr2_copy = ft_memcpy(ftcopy, str, str_size);
-
-//ft_putchar(ptr2_copy[1]);
-
-printf("\n=================== ft_ft_memcpy check ========================\n");
-
-
 /*
+printf("\n=================== ft_ft_memcpy check ========================\n");
+
+char src[] = "A";
+int	array[20] = {84,104,105,115,32,105,115,32,97,32};
+char ft_dest[20] = "0";
+char *ft_ptr;
+char dest[20] = "0";
+char *ptr;
+int *ptr_int;
+int *ft_ptr_int;
+int i;
+int end = ft_strlen(src);
+int ft_end = 10;
+int dst[20];
+int ft_dst[20];
+
+
+ptr = memcpy(dest, src, 10);
+ft_ptr = ft_memcpy(ft_dest, src, 10);
+
+i = 0;
+printf("\nmemcpy (char)     :");
+while (i < end)
+{
+	printf("%d ",ptr[i]);
+	i++;
+}
+i = 0;
+printf("\nft_memcpy (char)  :");
+while (i < end)
+{
+	printf("%d ",ft_ptr[i]);
+	i++;
+}
+
+printf("\nmemcpy            :");
+printf("%s ",ptr);
+printf("\nft_memcpy         :");
+printf("%s ",ft_ptr);
+
+i  = 0;
+ptr_int = memcpy(dst, array, 20 * 4);
+printf("\nmemcpy (int)      :");
+while (i < ft_end)
+{
+	printf("%d ",ptr_int[i++]);
+}
+
+i  = 0;
+ft_ptr_int = ft_memcpy(ft_dst, array, 20 * 4);
+printf("\nft_memcpy (int)   :");
+while (i < ft_end)
+{
+	printf("%d ",ft_ptr_int[i++]);
+}
+
+
+
+
+printf("\n=================== ft_ft_memcpy check ========================\n");
+*/
+
+
 printf("\n=================== ft_ft_memmove check ========================\n");
 
 
 char a[30] = "That's not what I said." ;
 
-memmove( a+7, a+11, 13 );      // Move 13 bytes, 'w' through '\0'
+ft_memmove( a+7, a+11, 13 );      // Move 13 bytes, 'w' through '\0'
 
 printf("Vrai : %s", a );
 
 
 printf("\n=================== ft_ft_memmove check ========================\n");
-*/
+
 	return (0);
 }

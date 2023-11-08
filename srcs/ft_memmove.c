@@ -6,7 +6,7 @@
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:41:12 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/08 17:25:44 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/08 22:34:38 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -24,6 +24,15 @@
 *						before : That's not what I said.$
 *						after  : That's what I said.$
 **/
-/*
-void	*memmove(void *dest
-*/
+
+#include "libft.h"
+
+void	*memmove(void *dest, const	void *src, size_t n)
+{
+
+
+
+
+
+
+}
