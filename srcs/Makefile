@@ -1,7 +1,7 @@
 ###############################################################################
 ## ARGUMENTS
 
-NAME=output
+NAME=out
 EXEC=libft.a
 CFLAGS=-Wall -Wextra -Werror
 SRCS=$(addprefix $(SRC_DIR), $(SRC))
@@ -17,9 +17,8 @@ SRC_OBJ=$(addprefix $(OBJ_DIR), $(OBJ))
 
 SRC_DIR=
 OBJ_DIR=objs/
-INCLUDE=../includes/
-SRC=test.c
-SRC+=ft_putchar.c ft_putstr.c ft_putchar_fd.c
+INCLUDE=
+SRC=ft_putchar.c ft_putstr.c ft_putchar_fd.c
 SRC+=ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_striteri.c
 SRC+=ft_islower.c ft_isupper.c ft_isalpha.c ft_isdigit.c ft_isalnum.c
 SRC+=ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c
@@ -37,8 +36,8 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@echo "\nlinking FILES .......\n"
 	cc $(OBJ) $(MAIN_OBJ).o -o $(NAME)
-#	@echo "\nCreating Libft.a FILE .......\n"
-#	ar -rcs $(EXEC) $(OBJ)
+	@echo "\nCreating Libft.a FILE .......\n"
+	ar -rcs $(EXEC) $(OBJ)
 $(OBJ):
 	@echo "\nCOMPILE all c files to .o FILES .......\n"
 	$(CC) $(CFLAGS) -c -g $(SRCS) -I $(HEAD)
@@ -49,7 +48,7 @@ clean:
 
 fclean:clean
 	@echo "\nFCLEAN all .o et .a files .......\n"
-	rm -f $(NAME) main.o	
+	rm -f $(NAME) $(MAIN).o	
 
 re:fclean all
 	@echo "\nAll erased and re compiled .......\n"
