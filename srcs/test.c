@@ -6,10 +6,10 @@
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 07:59:18 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/09 16:56:27 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/09 17:23:54 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
+
 #include <stdio.h>
 #include "libft.h"
 #include <string.h>
@@ -61,4 +61,4 @@ char carr_src[] = "AbCfed";
 	printf("           -word_V memory : %s\n",carr_dest);
 
 return (0);
-}*/
+}
