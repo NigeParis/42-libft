@@ -6,7 +6,7 @@
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 08:56:38 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/09 17:00:37 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/12 22:09:13 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -341,18 +341,258 @@ while (i < ft_end)
 printf("\n=================== ft_ft_memcpy check ========================\n");
 */
 
-
+/*
 printf("\n=================== ft_ft_memmove check ========================\n");
 
 
-char a[30] = "That's not what I said." ;
+char a[] = "That's not what I said." ;
+char b[] = "That's not what I said." ;
+char c[] = "That's not what I said." ;
 
-ft_memmove( a+7, a+11, 13 );      // Move 13 bytes, 'w' through '\0'
+ft_memmove( a+7, a+11, 16 );      // Move 13 bytes, 'w' through '\0'
+memmove( b+7, b+11, 16 );         // Move 13 bytes, 'w' through '\0'
+printf("\nVrai         : %s", b );
+printf("\nFaux         : %s", a );
 
-printf("Vrai : %s", a );
+ft_memmove( a, c, 24);            // Reset char a[]
+memmove( b, c, 24 );              // Reset char b[]
+printf("\nVrai - reset : %s", b );
+printf("\nFaux - reset : %s", a );
 
+ft_memmove( a+3, a+1, 16 );      // Move 16 bytes, 'h' through '\0'
+memmove( b+3, b+1, 16 );         // Move 16 bytes, 'h' through '\0'
+printf("\nVrai         : %s", b );
+printf("\nFaux         : %s", a );
+
+ft_memmove( a, c, 24);            // Reset char a[]
+memmove( b, c, 24 );              // Reset char b[]
+printf("\nVrai - reset : %s", b );
+printf("\nFaux - reset : %s", a );
 
 printf("\n=================== ft_ft_memmove check ========================\n");
+*/
+
+/*
+printf("\n=================== ft_ft_strlcpy check ========================\n");
+#define SIZE 32
+
+char	src[] = "This-is-the-string-to-be-copied";
+char	V_dest[SIZE];
+char	F_dest[SIZE];
+char	S_dest[SIZE];
+size_t	V_ret_nbr;
+size_t	F_ret_nbr;
+int		S_ret_nbr;
+
+printf("\nSTR: %s : %d chars including NULL term", src, ft_strlen(src) + 1);
+printf("\n----------------------------------------------------------------");
+
+ft_memset(V_dest, 'r', 6);
+ft_memset(S_dest, 'r', 6);
+ft_memset(F_dest, 'r', 6);
+
+
+V_ret_nbr = strlcpy(V_dest, src, 0);
+S_ret_nbr = snprintf(S_dest, 0, "%s", src);
+F_ret_nbr = ft_strlcpy(F_dest, src, 0);
+printf("\nVRAI dstsize = 0: '%s'  : %ld", V_dest, V_ret_nbr);
+printf("\nSnprintf dts = 0: '%s'  : %d", S_dest, S_ret_nbr);
+printf("\nFAUX dstsize = 0: '%s'  : %ld\n", F_dest, F_ret_nbr);
+
+
+ft_memset(V_dest, 'r', 6);
+ft_memset(S_dest, 'r', 6);
+ft_memset(F_dest, 'r', 6);
+
+
+V_ret_nbr = strlcpy(V_dest, src, 20);
+S_ret_nbr = snprintf(S_dest, 20, "%s", src);
+F_ret_nbr = ft_strlcpy(F_dest, src, 20);
+printf("\nVRAI: dstsize < src '%s' : %ld", V_dest, V_ret_nbr);
+printf("\nSPRI: dstsize < src '%s' : %d", S_dest, S_ret_nbr);
+printf("\nFAUX: dstsize < src '%s' : %ld\n", F_dest, F_ret_nbr);
+
+ft_memset(V_dest, 'r', 6);
+ft_memset(S_dest, 'r', 6);
+ft_memset(F_dest, 'r', 6);
+
+V_ret_nbr = strlcpy(V_dest, "", 0);
+S_ret_nbr = snprintf(S_dest, 0, "%s", "");
+F_ret_nbr = ft_strlcpy(F_dest, "", 0);
+printf("\nVRAI: emtpy src et dstsize '%s' : %ld", V_dest, V_ret_nbr);
+printf("\nSPRI: empty src et dstsize '%s' : %d", S_dest, S_ret_nbr);
+printf("\nFAUX: empty src et dstsize '%s' : %ld\n", F_dest, F_ret_nbr);
+
+
+ft_memset(V_dest, 'r', 6);
+ft_memset(S_dest, 'r', 6);
+ft_memset(F_dest, 'r', 6);
+
+
+V_ret_nbr = strlcpy(V_dest, src, 32);
+S_ret_nbr = snprintf(S_dest, 32, "%s", src);
+F_ret_nbr = ft_strlcpy(F_dest, src, 32);
+ft_putchar_fd('\n', 1);
+printf("\nVRAI: dstsize = src '%s' : %ld", V_dest, V_ret_nbr);
+ft_putstr("VRAI    srtlcpy ");
+ft_putstr_fd(V_dest, 1);
+ft_putchar_fd('\n', 1);
+printf("\nSPRI: dstsize = src '%s' : %d", S_dest, S_ret_nbr);
+ft_putstr("VRAI   snprintf ");
+ft_putstr_fd(S_dest, 1);
+ft_putchar_fd('\n', 1);
+printf("\nFAUX: dstsize = src '%s' : %ld\n", F_dest, F_ret_nbr);
+ft_putstr("FAUX ft_srtlcpy ");
+ft_putstr_fd(F_dest, 1);
+ft_putchar_fd('\n', 1);
+ft_putchar_fd('\n', 1);
+
+
+ft_memset(V_dest, 'r', 6);
+ft_memset(S_dest, 'r', 6);
+ft_memset(F_dest, 'r', 6);
+
+V_ret_nbr = strlcpy(V_dest, "", 15);
+S_ret_nbr = snprintf(S_dest, 15, "%s", "");
+F_ret_nbr = ft_strlcpy(F_dest, "", 15);
+ft_putchar_fd('\n', 1);
+printf("\nVRAI: dstsize = src '%s' : %ld", V_dest, V_ret_nbr);
+ft_putstr("VRAI    srtlcpy ");
+ft_putstr_fd(V_dest, 1);
+ft_putchar_fd('\n', 1);
+printf("\nSPRI: dstsize = src '%s' : %d", S_dest, S_ret_nbr);
+ft_putstr("VRAI   snprintf ");
+ft_putstr_fd(S_dest, 1);
+ft_putchar_fd('\n', 1);
+printf("\nFAUX: dstsize = src '%s' : %ld\n", F_dest, F_ret_nbr);
+ft_putstr("FAUX ft_srtlcpy ");
+ft_putstr_fd(F_dest, 1);
+ft_putchar_fd('\n', 1);
+ft_putchar_fd('\n', 1);
+
+
+ft_memset(V_dest, 'r', 6);
+ft_memset(S_dest, 'r', 6);
+ft_memset(F_dest, 'r', 6);
+
+V_ret_nbr = strlcpy(V_dest, "12345", 15);
+S_ret_nbr = snprintf(S_dest, 15, "%s", "12345");
+F_ret_nbr = ft_strlcpy(F_dest, "12345", 15);
+ft_putchar_fd('\n', 1);
+printf("\nVRAI: dstsize = src '%s' : %ld", V_dest, V_ret_nbr);
+ft_putstr("VRAI    srtlcpy ");
+ft_putstr_fd(V_dest, 1);
+ft_putchar_fd('\n', 1);
+printf("\nSPRI: dstsize = src '%s' : %d", S_dest, S_ret_nbr);
+ft_putstr("VRAI   snprintf ");
+ft_putstr_fd(S_dest, 1);
+ft_putchar_fd('\n', 1);
+printf("\nFAUX: dstsize = src '%s' : %ld\n", F_dest, F_ret_nbr);
+ft_putstr("FAUX ft_srtlcpy ");
+ft_putstr_fd(F_dest, 1);
+ft_putchar_fd('\n', 1);
+ft_putchar_fd('\n', 1);
+
+
+
+printf("\n=================== ft_ft_strlcpy check ========================\n");
+*/
+/*
+printf("\n=================== ft_ft_strlcat check ========================\n");
+
+#define BUFFER 40
+
+char	S_dest[BUFFER] = "";
+char	F_dest[BUFFER] = "";
+char	S_str_to_add[] = "123456";
+char	F_str_to_add[] = "123456";
+size_t	dstsize;
+size_t	S_len;
+size_t	F_len;
+S_len = 0;
+F_len = 0;
+
+dstsize = 6;
+
+//S_len = snprintf(S_dest, BUFFER, "%s%s", S_dest, S_str_to_add );
+S_len = strlcat(S_dest, S_str_to_add, dstsize);
+F_len = ft_strlcat(F_dest, F_str_to_add, dstsize);
+
+printf("\nS_dest dstsize 1, BUFFER 10 : %s  :%zu", S_dest, S_len);
+printf("\nF_dest dstsize 1, BUFFER 10 : %s  :%zu\n", F_dest, F_len);
+
+ft_memset(S_dest, '\0', 6);
+ft_memset(F_dest, '\0', 6);
+dstsize =10;
+
+S_len = strlcat(S_dest, S_str_to_add, dstsize);
+F_len = ft_strlcat(F_dest, F_str_to_add, dstsize);
+
+printf("\nV_dest empty  BUFFER 10 : %s  :%zu", S_dest, S_len);
+printf("\nF_dest empty  BUFFER 10 : %s  :%zu\n", F_dest, F_len);
+
+ft_memset(S_dest, 'r', 6);
+ft_memset(F_dest, 'r', 6);
+dstsize =10;
+
+S_len = strlcat(S_dest, S_str_to_add, dstsize);
+F_len = ft_strlcat(F_dest, F_str_to_add, dstsize);
+
+printf("\nV_dest empty  BUFFER 10 : %s  :%zu", S_dest, S_len);
+printf("\nF_dest ssss   BUFFER 10 : %s  :%zu\n", F_dest, F_len);
+
+ft_memset(S_dest, 'A', 10);
+ft_memset(F_dest, 'A', 10);
+dstsize =22;
+
+S_len = strlcat(S_dest, S_str_to_add, dstsize);
+F_len = ft_strlcat(F_dest, F_str_to_add, dstsize);
+
+printf("\nV_dest empty  BUFFER 10 : %s  :%zu", S_dest, S_len);
+printf("\nF_dest ssss   BUFFER 10 : %s  :%zu\n", F_dest, F_len);
+
+printf("\n====================== ft_strlcat check ========================\n");
+*/
+/*
+
+printf("\n====================== ft_toupper check ========================\n");
+
+char	str[] = "azjdkTHlm(mlkjsdbuzjz;qm;qna";
+int i = 0;
+
+while (str[i])
+{
+		printf("%c ", (int)str[i]);
+		i++;
+}
+printf("\n");
+i = 0;
+while (str[i])
+{
+		printf("%c ", ft_toupper((int)str[i]));
+		i++;
+}
+
+
+printf("\n======================= ft_toupper check ========================\n");
+*/
+
+
+printf("\n===================== ft_tolower check ========================\n");
+
+char	*str = "AsZDeFr§§ghKLMPICCVX123R997KKLMéé&dfg";
+
+while (*str)
+{
+	printf("%c ", ft_tolower(*str));
+
+
+	str++;
+}
+
+
+printf("\n======================= ft_tolower check ========================\n");
+
 
 	return (0);
 }

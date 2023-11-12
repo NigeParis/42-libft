@@ -6,7 +6,7 @@
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:52:23 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/08 09:43:06 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/10 11:20:31 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -24,7 +24,7 @@
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-	return ( c > 31 && c < 127 );
+	return (c > 31 && c < 127);
 }

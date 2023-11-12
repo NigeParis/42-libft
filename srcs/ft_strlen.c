@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 21:56:57 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/08 09:46:28 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/12 13:40:30 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -25,12 +25,12 @@
 
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
-	while(*s)
+	while (*s)
 	{
 		len++;
 		s++;
