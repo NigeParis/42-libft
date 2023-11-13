@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/13 21:50:26 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/13 22:56:56 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -633,7 +633,6 @@ printf("\n====================== ft_strncmp check ========================\n");
 
 char	str1[] = "This is a stiing to compare";
 char	str2[] = "This is a string to compare";
-int		result;
 char	str3[] = "";
 char	str4[] = "";
 char	str5[] = "A";
@@ -646,6 +645,7 @@ char	str11[] = "abcdefgh";
 char	str12[] = "abcdwxyz";
 char	str13[] = "test\200";
 char	str14[] = "test\0";
+int		result;
 
 printf("\nstr1 :%s", str1);
 printf("\nstr2 :%s\n", str2);
@@ -732,24 +732,20 @@ result_Fptr = ft_memchr(Fptr, 't', 1);
 printf("\n VRAI 't' n = 1: %s", result_Vptr);
 printf("\n FAUX 't' n = 1: %s\n", result_Fptr);
 
-
 result_Vptr = memchr(Vptr, 't', 2);
 result_Fptr = ft_memchr(Fptr, 't', 2);
 printf("\n VRAI 't' n = 2: %s", result_Vptr);
 printf("\n FAUX 't' n = 2: %s\n", result_Fptr);
-
 
 result_Vptr = memchr(Vptr, 's', 9);
 result_Fptr = ft_memchr(Fptr, 's', 9);
 printf("\n VRAI 's' n = 9: %s", result_Vptr);
 printf("\n FAUX 's' n = 9: %s\n", result_Fptr);
 
-
 result_Vptr = memchr(Vptr, 'q', 35);
 result_Fptr = ft_memchr(Fptr, 'q', 35);
 printf("\n VRAI 'q' n = 35: %s", result_Vptr);
 printf("\n FAUX 'q' n = 35: %s\n", result_Fptr);
-
 
 result_Vptr = memchr(Vptr, 'm', 35);
 result_Fptr = ft_memchr(Fptr, 'm', 35);
@@ -797,8 +793,7 @@ printf ("\nfaux s1 = s2 = 0  '', '',                    n = 0 - result : %d", re
 
 printf("\n\n====================== ft_memcmp check ========================\n");
 */
-
-
+/*
 printf("\n\n====================== ft_strnstr check ========================\n");
 
 char	big[] = "this is bithe big str";
@@ -808,16 +803,49 @@ char	*Fresult;
 
 Vresult = strnstr(big, little, 10);
 Fresult = ft_strnstr(big, little, 10);
+printf("\nVrai : 'this is bithe big str', '',  - len = 10 -> %s", Vresult);
+printf("\nFaux : 'this is bithe big str', '',  - len = 10 -> %s\n", Fresult);
 
-printf("\nVrai : %s", Vresult);
-printf("\nFaux : %s", Fresult);
+Vresult = strnstr(big, "big", 10);
+Fresult = ft_strnstr(big, "big", 10);
+printf("\nVrai : 'this is bithe big str', 'big',  - len = 10 -> %s", Vresult);
+printf("\nFaux : 'this is bithe big str', 'big',  - len = 10 -> %s\n", Fresult);
 
+Vresult = strnstr("", "", 10);
+Fresult = ft_strnstr("", "", 10);
+printf("\nVrai : '', '',  - len = 10 -> %s", Vresult);
+printf("\nFaux : '', '',  - len = 10 -> %s\n", Fresult);
 
+Vresult = strnstr("a", "a", 1);
+Fresult = ft_strnstr("a", "a", 1);
+printf("\nVrai : 'a', 'a',  - len = 1 -> %s", Vresult);
+printf("\nFaux : 'a', 'a',  - len = 1 -> %s\n", Fresult);
 
+Vresult = strnstr("", "a", 1);
+Fresult = ft_strnstr("", "a", 1);
+printf("\nVrai : '', 'a',  - len = 1 -> %s", Vresult);
+printf("\nFaux : '', 'a',  - len = 1 -> %s\n", Fresult);
 
-
+Vresult = strnstr("sma s sm smal smalll ex samall tec", "small", 200);
+Fresult = ft_strnstr("sma s sm smal smalll ex samall tec", "small", 200);
+printf("\nVrai : 'sma s sm smal smalll ex samall tec', 'small',  - len = 1 -> %s", Vresult);
+printf("\nFaux : 'sma s sm smal smalll ex samall tec', 'small',  - len = 1 -> %s\n", Fresult);
 
 printf("\n\n====================== ft_strnstr check ========================\n");
+*/
+
+printf("\n\n====================== ft_atoi check ========================\n)");
+
+int		result;
+
+result = atoi("123a45");
+
+printf("\nVrai : %d", result);
+
+
+
+
+printf("\n\n====================== ft_atoi check ========================\n");
 
 	return (0);
 }

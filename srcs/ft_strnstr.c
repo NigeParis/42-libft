@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:25:12 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/13 22:04:35 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/13 22:36:35 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -47,7 +47,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	{
 		if (find[j] == str[i])
 		{
-			while ((find[j++] == str[i++]) && i < len)
+			while ((find[j++] == str[i++]) && i <= len)
 				if (find[j] == '\0')
 					return (&str[i] - j);
 			j = 0;
