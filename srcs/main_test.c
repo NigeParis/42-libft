@@ -6,10 +6,11 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/13 16:25:23 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/13 18:30:46 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <bsd/string.h>
 #include "libft.h"
 #include <ctype.h>
 #include <stdio.h>
@@ -763,11 +764,58 @@ printf("\n FAUX '' n = 35: %s\n", result_Fptr);
 
 printf("\n====================== ft_memchr check ========================\n");
 */
+/*
+printf("\n====================== ft_memcmp check ========================\n");
+
+int	result;
+
+result = 0;
+
+result = memcmp("s", "string", 6);
+printf ("\n\nVrai s1 < s2 = -1 's', 'string',             n = 6 - result :%d", result);
+result = ft_memcmp("s", "string", 6);
+printf ("\nFaux s1 < s2 = -1 's', 'string',             n = 6 - result :%d", result);
+
+result = memcmp("string", "", 6);
+printf ("\n\nVrai s1 > s2 = 1  'string', '',              n = 6 - result : %d", result);
+result = ft_memcmp("string", "", 6);
+printf ("\nFaux s1 > s2 = 1  'string', '',              n = 6 - result : %d", result);
+
+result = memcmp("stringwww", "stringzzzz", 6);
+printf ("\n\nVrai s1 = s2 = 0  'stringwww', 'stringzzzz', n = 6 - result : %d", result);
+result = ft_memcmp("stringwww", "stringzzzz", 6);
+printf ("\nFaux s1 = s2 = 0  'stringwww', 'stringzzzz', n = 6 - result : %d", result);
+
+result = memcmp("", "", 6);
+printf ("\n\nVrai s1 = s2 = 0  '', '',                    n = 6 - result : %d", result);
+result = ft_memcmp("", "", 6);
+printf ("\nFaux s1 = s2 = 0  '', '',                    n = 6 - result : %d", result);
+
+result = memcmp("", "", 0);
+printf ("\n\nVrai s1 = s2 = 0  '', '',                    n = 0 - result : %d", result);
+result = ft_memcmp("", "", 0);
+printf ("\nfaux s1 = s2 = 0  '', '',                    n = 0 - result : %d", result);
+
+printf("\n\n====================== ft_memcmp check ========================\n");
+*/
+
+
+printf("\n\n====================== ft_strnstr check ========================\n");
+
+char	big[] = "this is the big str";
+char	little[] = "big";
+char	*result;
+
+//result = strnstr(big, little, 16);
+
+printf("\nVrai : %s", result);
 
 
 
 
 
+
+printf("\n\n====================== ft_strnstr check ========================\n");
 
 	return (0);
 }
