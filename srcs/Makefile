@@ -15,9 +15,9 @@ SRC_OBJ=$(addprefix $(OBJ_DIR), $(OBJ))
 ###############################################################################
 ## SOURCES 
 
-SRC_DIR=
+SRC_DIR=./
 OBJ_DIR=objs/
-INCLUDE=
+INCLUDE=./
 SRC=ft_putchar.c ft_putstr.c ft_putchar_fd.c
 SRC+=ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_striteri.c
 SRC+=ft_islower.c ft_isupper.c ft_isalpha.c ft_isdigit.c ft_isalnum.c
@@ -32,8 +32,8 @@ MAIN=main_test
 ## RULES
 
 all: $(NAME)
-	@mv $(OBJ) $(OBJ_DIR)
 	@echo "\nDone ! .......\n"
+	@mv $(OBJ) $(OBJ_DIR)
 
 $(NAME): $(OBJ)
 	@echo "\nCreating Libft.a FILE .......\n"
