@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_test.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 08:56:38 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/12 22:09:13 by nrobinso         ###   ########.fr       */
+/*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
+/*   Updated: 2023/11/13 12:12:14 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -576,7 +576,7 @@ while (str[i])
 
 printf("\n======================= ft_toupper check ========================\n");
 */
-
+/*
 
 printf("\n===================== ft_tolower check ========================\n");
 
@@ -592,7 +592,88 @@ while (*str)
 
 
 printf("\n======================= ft_tolower check ========================\n");
+*/
+/*
+
+printf("\n======================= ft_strchr check ========================\n");
+
+char	str[] = "abciwdefghijklmnopqrstuvwxyz";
+int		c;
+char	*result;
+
+c = 'w';
+
+result = ft_strchr(str, c);
+
+printf("\nfound     : %c", *result);
+result++;
+printf("\nnext char : %c", *result);
 
 
+
+printf("\n======================= ft_strchr check ========================\n");
+*/
+/*
+printf("\n======================= ft_strrchr check ========================\n");
+
+char	str[] = "bonjour     :   @     @x";
+int		c;
+char	*result;
+
+c = '\0';
+result = ft_strrchr(str, c);
+printf("\nfound.................. : %c", *result);
+result++;
+printf("\nnext char in the string : %c", *result);
+
+printf("\n======================= ft_strrchr check ========================\n");
+*/
+
+
+printf("\n====================== ft_strncmp check ========================\n");
+
+char	str1[] = "This is a stiing to compare";
+char	str2[] = "This is a string to compare";
+int		result;
+char	str3[] = "";
+char	str4[] = "";
+char	str5[] = "A";
+char	str6[] = "a";
+
+
+
+
+
+printf("\nstr1 :%s", str1);
+printf("\nstr2 :%s\n", str2);
+
+result = 0;
+result = strncmp(str1, str2, 13);
+printf("\nV_Result n = 13 : %d", result);
+result = ft_strncmp(str1, str2, 13);
+printf("\nF_Result n = 13 : %d", result);
+printf("\n");
+
+
+result = 0;
+result = strncmp(str3, str4, 13);
+printf("\nV_Result empty string : n = 13: %d", result);
+result = ft_strncmp(str3, str4, 13);
+printf("\nF_Result empty string : n = 13: %d", result);
+printf("\n");
+
+
+result = 0;
+result = strncmp(str5, str6, 1);
+printf("\nV_Result string 'A' : n = 1: %d", result);
+result = ft_strncmp(str5, str6, 1);
+printf("\nF_Result string 'a' : n = 1: %d", result);
+printf("\n");
+
+
+
+
+
+printf("\n====================== ft_strncmp check ========================\n");
 	return (0);
 }

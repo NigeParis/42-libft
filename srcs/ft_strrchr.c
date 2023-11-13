@@ -1,52 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 22:07:24 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/13 09:43:45 by nrobinso         ###   ########.fr       */
+/*   Created: 2023/11/13 09:48:10 by nrobinso          #+#    #+#             */
+/*   Updated: 2023/11/13 10:31:17 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
 * #include <string.h>
-* strchr  -   char *strchr(const char *s, int c);
+*
+* strrchr  -  char *strrchr(const char *s, int c);
 *
 * DESCRIPTION
-* The  strchr) function returns a pointer to the first occurrence of the 
+* The strrchr() function returns a pointer to the last occurrence of the
 * character c in the string s.
 *
-* Here "character" means "byte"; these functions do not work with wide  or  
-* multibyte characters.
-*
 * RETURN VALUE
-* The  strchr() function returns a pointer to the matched character or NULL if 
-* the character is not found.  The terminating null byte is  considered  part
-* of  the string, so that if c is specified as '\0', these functions 
-* return a pointer to the terminator.
+* The strrchr() function returns a pointer  to  the  matched character or NULL 
+* if the character is not found. The terminating null byte is considered part 
+* of the string, so that if  c  is  specified  as '\0', these functions return 
+* a pointer to the terminator.
 **/
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*str;
 	int		i;
+	int		found;
 
 	str = (char *)s;
 	i = 0;
+	found = 0;
 	if (c == '\0')
-	{	
+	{
 		while (*str)
 			str++;
 		return (str);
 	}
 	while (str[i])
 	{
-		if (c == str[i])
-			return (&str[i]);
+		if (str[i] == c)
+			found = i + 1;
 		i++;
 	}
-	return (NULL);
+	if (found)
+		return (&str[found - 1]);
+	return (0);
 }
