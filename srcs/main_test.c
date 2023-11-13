@@ -6,11 +6,10 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/13 18:30:46 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/13 21:50:26 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
 #include "libft.h"
 #include <ctype.h>
 #include <stdio.h>
@@ -802,13 +801,16 @@ printf("\n\n====================== ft_memcmp check ========================\n");
 
 printf("\n\n====================== ft_strnstr check ========================\n");
 
-char	big[] = "this is the big str";
-char	little[] = "big";
-char	*result;
+char	big[] = "this is bithe big str";
+char	little[] = "";
+char	*Vresult;
+char	*Fresult;
 
-//result = strnstr(big, little, 16);
+Vresult = strnstr(big, little, 10);
+Fresult = ft_strnstr(big, little, 10);
 
-printf("\nVrai : %s", result);
+printf("\nVrai : %s", Vresult);
+printf("\nFaux : %s", Fresult);
 
 
 

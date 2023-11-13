@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:25:12 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/13 17:41:14 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/13 22:04:35 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -32,35 +32,27 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
+	char		*str;
+	char		*find;
+	size_t		i;
+	size_t		j;
 
-
-
-
-
-
-
-
+	str = (char *)big;
+	find = (char *)little;
+	i = 0;
+	j = 0;
+	if (!*find)
+		return (&str[i]);
+	while (i < len)
+	{
+		if (find[j] == str[i])
+		{
+			while ((find[j++] == str[i++]) && i < len)
+				if (find[j] == '\0')
+					return (&str[i] - j);
+			j = 0;
+		}
+		i++;
+	}
+	return (0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

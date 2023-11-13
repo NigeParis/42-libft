@@ -24,7 +24,7 @@ SRC+=ft_islower.c ft_isupper.c ft_isalpha.c ft_isdigit.c ft_isalnum.c
 SRC+=ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c
 SRC+=ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c
 SRC+=ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c
-SRC+=ft_memcmp.c
+SRC+=ft_memcmp.c ft_strnstr.c
 HEADER=libft.h
 MAIN=main_test
 

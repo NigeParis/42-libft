@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 22:07:24 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/13 09:43:45 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/13 22:09:29 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -37,7 +37,7 @@ char	*ft_strchr(const char *s, int c)
 	str = (char *)s;
 	i = 0;
 	if (c == '\0')
-	{	
+	{
 		while (*str)
 			str++;
 		return (str);
