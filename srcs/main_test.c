@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/13 12:12:14 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/13 16:25:23 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -623,13 +623,12 @@ char	*result;
 c = '\0';
 result = ft_strrchr(str, c);
 printf("\nfound.................. : %c", *result);
-result++;
+abcdefghresult++;
 printf("\nnext char in the string : %c", *result);
 
 printf("\n======================= ft_strrchr check ========================\n");
 */
-
-
+/*
 printf("\n====================== ft_strncmp check ========================\n");
 
 char	str1[] = "This is a stiing to compare";
@@ -639,21 +638,24 @@ char	str3[] = "";
 char	str4[] = "";
 char	str5[] = "A";
 char	str6[] = "a";
-
-
-
-
+char	str7[] = "";
+char	str8[] = "test";
+char	str9[] = "test";
+char	str10[] = "";
+char	str11[] = "abcdefgh";
+char	str12[] = "abcdwxyz";
+char	str13[] = "test\200";
+char	str14[] = "test\0";
 
 printf("\nstr1 :%s", str1);
 printf("\nstr2 :%s\n", str2);
 
 result = 0;
 result = strncmp(str1, str2, 13);
-printf("\nV_Result n = 13 : %d", result);
+printf("\nV_Result 'This is a stiing to compare' n = 13 : %d", result);
 result = ft_strncmp(str1, str2, 13);
-printf("\nF_Result n = 13 : %d", result);
+printf("\nF_Result 'This is a string to compare' n = 13 : %d", result);
 printf("\n");
-
 
 result = 0;
 result = strncmp(str3, str4, 13);
@@ -662,7 +664,6 @@ result = ft_strncmp(str3, str4, 13);
 printf("\nF_Result empty string : n = 13: %d", result);
 printf("\n");
 
-
 result = 0;
 result = strncmp(str5, str6, 1);
 printf("\nV_Result string 'A' : n = 1: %d", result);
@@ -670,10 +671,103 @@ result = ft_strncmp(str5, str6, 1);
 printf("\nF_Result string 'a' : n = 1: %d", result);
 printf("\n");
 
+result = 0;
+result = strncmp(str5, str6, 0);
+printf("\nV_Result string 'A' : n = 0: %d", result);
+result = ft_strncmp(str5, str6, 0);
+printf("\nF_Result string 'a' : n = 0: %d", result);
+printf("\n");
 
+result = 0;
+result = strncmp(str7, str8, 4);
+printf("\nV_Result string '' : n = 4: %d", result);
+result = ft_strncmp(str7, str8, 4);
+printf("\nF_Result string 'test' : n = 4: %d", result);
+printf("\n");
 
+result = 0;
+result = strncmp(str9, str10, 4);
+printf("\nV_Result string 'test' : n = 4: %d", result);
+result = ft_strncmp(str9, str10, 4);
+printf("\nF_Result string '' : n = 4: %d", result);
+printf("\n");
 
+result = 0;
+result = strncmp(str11, str12, 4);
+printf("\nV_Result string 'abcdefgh' : n = 4: %d", result);
+result = ft_strncmp(str11, str12, 4);
+printf("\nF_Result string 'abcdwxyz' : n = 4: %d", result);
+printf("\n");
+
+result = 0;
+result = strncmp(str13, str14, 6);
+printf("\nV_Result string 'test\\200' : n = 6: %d", result);
+result = ft_strncmp(str13, str14, 6);
+printf("\nF_Result string 'test\\0' : n = 6: %d", result);
+printf("\n");
 
 printf("\n====================== ft_strncmp check ========================\n");
+*/
+/*
+printf("\n====================== ft_memchr check ========================\n");
+
+char	str_to_search[] = "this is a string to be seached by memchr function";
+char	*Vptr;
+char	*Fptr;
+char	*result_Vptr = NULL;
+char	*result_Fptr = NULL;
+
+Vptr = str_to_search;
+Fptr = str_to_search;
+
+printf("\n%s\n", str_to_search);
+
+result_Vptr = memchr(Vptr, 't', 0);
+result_Fptr = ft_memchr(Fptr, 't', 0);
+printf("\n VRAI 't' n = 0: %s", result_Vptr);
+printf("\n FAUX 't' n = 0: %s\n", result_Fptr);
+
+result_Vptr = memchr(Vptr, 't', 1);
+result_Fptr = ft_memchr(Fptr, 't', 1);
+printf("\n VRAI 't' n = 1: %s", result_Vptr);
+printf("\n FAUX 't' n = 1: %s\n", result_Fptr);
+
+
+result_Vptr = memchr(Vptr, 't', 2);
+result_Fptr = ft_memchr(Fptr, 't', 2);
+printf("\n VRAI 't' n = 2: %s", result_Vptr);
+printf("\n FAUX 't' n = 2: %s\n", result_Fptr);
+
+
+result_Vptr = memchr(Vptr, 's', 9);
+result_Fptr = ft_memchr(Fptr, 's', 9);
+printf("\n VRAI 's' n = 9: %s", result_Vptr);
+printf("\n FAUX 's' n = 9: %s\n", result_Fptr);
+
+
+result_Vptr = memchr(Vptr, 'q', 35);
+result_Fptr = ft_memchr(Fptr, 'q', 35);
+printf("\n VRAI 'q' n = 35: %s", result_Vptr);
+printf("\n FAUX 'q' n = 35: %s\n", result_Fptr);
+
+
+result_Vptr = memchr(Vptr, 'm', 35);
+result_Fptr = ft_memchr(Fptr, 'm', 35);
+printf("\n VRAI 'm' n = 35: %s", result_Vptr);
+printf("\n FAUX 'm' n = 35: %s\n", result_Fptr);
+
+result_Vptr = memchr(Vptr, 0, 35);
+result_Fptr = ft_memchr(Fptr, 0, 35);
+printf("\n VRAI '' n = 35: %s", result_Vptr);
+printf("\n FAUX '' n = 35: %s\n", result_Fptr);
+
+printf("\n====================== ft_memchr check ========================\n");
+*/
+
+
+
+
+
+
 	return (0);
 }
