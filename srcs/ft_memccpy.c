@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:04:24 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/14 16:24:05 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/14 18:58:29 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -28,6 +28,27 @@
 * is undefined.
 **/
 
+#include "libft.h"
 
- 
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+{
+	char				*str;
+	char				*dest;
+	unsigned int		i;
+	unsigned int		end;
 
+	i = 0;
+	str = (char *)src;
+	dest = (char *)dst;
+	end = (int)n - 1;
+	while (i <= end)
+	{
+		dest[i] = str[i];
+		if (str[i] == c)
+		{
+			return (&dst[i + 1]);
+		}
+		i++;
+	}
+	return (0);
+}

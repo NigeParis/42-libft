@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/14 16:30:17 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/14 18:23:49 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -988,11 +988,25 @@ printf("\n======================== ft_strdup check =========================\n")
 
 printf("\n======================== ft_memccpy check =========================\n");
 
+	char	src[] = "zyxwvutsrqponmlkjihgfedcba";
+	char	Vdst[30];
+	char	Fdst[30];
+	char	*Vptr;
+	char	*Fptr;
 
+	Fptr = NULL;
+	Vptr = NULL;
 
-
-
-
+	ft_memset(Vdst, 'j', 29);
+	Vptr = memccpy(Vdst, src, 'r', 20);
+	printf("\nVrai : '%s'", Vdst);
+	printf("\nVrai ptr  : '%p'", Vptr);
+	printf("\nVrai ptr  : '%s'", Vptr);
+	ft_memset(Fdst, 'j', 29);
+	Fptr = ft_memccpy(Fdst, src, 'r', 20);
+	printf("\nFaux : '%s'", Fdst);
+	printf("\nFaux ptr  : '%p'", Fptr);
+	printf("\nFaux ptr  : '%s'", Fptr);
 
 
 
