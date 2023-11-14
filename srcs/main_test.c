@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/14 18:23:49 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/14 22:55:40 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -985,7 +985,7 @@ free(Fptr);
 
 printf("\n======================== ft_strdup check =========================\n");
 */
-
+/*
 printf("\n======================== ft_memccpy check =========================\n");
 
 	char	src[] = "zyxwvutsrqponmlkjihgfedcba";
@@ -1013,5 +1013,63 @@ printf("\n======================== ft_memccpy check =========================\n"
 
 
 printf("\n======================== ft_memccpy check =========================\n");
+*/
+
+printf("\n======================== ft_substr check =========================\n");
+
+	char	str[] = "This-is-the-string-to-get-substring";
+	char	*ptr_to_substr;
+
+	ptr_to_substr = NULL;
+	ptr_to_substr = ft_substr(str, 8, 3);
+	printf("\nstring : '%s'",str);
+	printf("\nResult : '%s' - start 8, len 3\n", ptr_to_substr);
+	free(ptr_to_substr);
+
+	ptr_to_substr = NULL;
+	ptr_to_substr = ft_substr(str, 1, 1);
+	printf("\nstring : '%s'",str);
+	printf("\nResult : '%s' - start 1, len 1\n", ptr_to_substr);
+	free(ptr_to_substr);
+
+	ptr_to_substr = NULL;
+	ptr_to_substr = ft_substr(str, 0, 1);
+	printf("\nstring : '%s'",str);
+	printf("\nResult : '%s' - start 0, len 1\n", ptr_to_substr);
+	free(ptr_to_substr);
+
+	ptr_to_substr = NULL;
+	ptr_to_substr = ft_substr(str, 34, 10);
+	printf("\nstring : '%s'",str);
+	printf("\nResult : '%s' - start 34, len 10\n", ptr_to_substr);
+	free(ptr_to_substr);
+
+	ptr_to_substr = NULL;
+	ptr_to_substr = ft_substr("", 10, 14);
+	printf("\nstring : ''");
+	printf("\nResult : '%s' - empty str start 34, len 10\n", ptr_to_substr);
+	free(ptr_to_substr);
+
+
+	ptr_to_substr = NULL;
+	ptr_to_substr = ft_substr("One two", 0, 0);
+	printf("\nstring : ''");
+	printf("\nResult : '%s' - start 0, len 0\n", ptr_to_substr);
+	free(ptr_to_substr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+printf("\n======================== ft_substr check =========================\n");
+
 	return (0);
 }
