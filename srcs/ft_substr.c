@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:34:43 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/14 22:57:29 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/14 23:02:30 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -41,7 +41,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	i = 0;
 	str = (char *)s;
-	substr = calloc(len, sizeof(char));
+	substr = ft_calloc(len, sizeof(char));
 	if (!substr)
 		return (NULL);
 	while (i < len)
