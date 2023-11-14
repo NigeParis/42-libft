@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/13 22:56:56 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/14 15:53:37 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,45 @@ int	main(void)
 	int asc;	
 	int i;
 	char next;
+
+	printf("\n\n======================== ft_isspace check ========================\n");
+
+	char c;
+
+	c = ' ';
+	if (isspace(c))
+		printf("\ntrue");
+
+	c = '\n';
+	if (isspace(c))
+		printf("\ntrue");
+
+	c = '\r';
+	if (isspace(c))
+		printf("\ntrue");
+
+	c = '\f';
+	if (isspace(c))
+		printf("\ntrue");
+
+
+	c = '\t';
+	if (isspace(c))
+		printf("\ntrue");
+
+
+	c = '\v';
+	if (isspace(c))
+		printf("\ntrue");
+
+	c = 'q';
+	if (isspace(c))
+		printf("\ntrue");
+	else	
+		printf("\nfalse");
+
+
+printf("\n\n======================== ft_isspace check ========================\n");
 
 
 	printf("\n=================== ft_isalpha check ===========================");
@@ -833,19 +872,117 @@ printf("\nFaux : 'sma s sm smal smalll ex samall tec', 'small',  - len = 1 -> %s
 
 printf("\n\n====================== ft_strnstr check ========================\n");
 */
+/*
+printf("\n\n====================== ft_atoi check ===========================\n");
 
-printf("\n\n====================== ft_atoi check ========================\n)");
+int		Vresult;
+int		Fresult;
 
-int		result;
+Vresult = atoi("-1");
+Fresult = ft_atoi("-1");
+printf("\nVrai : '-1' : %d", Vresult);
+printf("\nFaux : '-1' : %d\n", Fresult);
 
-result = atoi("123a45");
+Vresult = atoi("1");
+Fresult = ft_atoi("1");
+printf("\nVrai : '1' : %d", Vresult);
+printf("\nFaux : '1' : %d\n", Fresult);
 
-printf("\nVrai : %d", result);
+Vresult = atoi("");
+Fresult = ft_atoi("");
+printf("\nVrai : '' : %d", Vresult);
+printf("\nFaux : '' : %d\n", Fresult);
 
+Vresult = atoi("0");
+Fresult = ft_atoi("0");
+printf("\nVrai : '0' : %d", Vresult);
+printf("\nFaux : '0' : %d\n", Fresult);
 
+Vresult = atoi("-0");
+Fresult = ft_atoi("-0");
+printf("\nVrai : '-0' : %d", Vresult);
+printf("\nFaux : '-0' : %d\n", Fresult);
 
+Vresult = atoi("-12345");
+Fresult = ft_atoi("-12345");
+printf("\nVrai : '-12345' : %d", Vresult);
+printf("\nFaux : '-12345' : %d\n", Fresult);
 
-printf("\n\n====================== ft_atoi check ========================\n");
+Vresult = atoi("+12345");
+Fresult = ft_atoi("+12345");
+printf("\nVrai : '+12345' : %d", Vresult);
+printf("\nFaux : '+12345' : %d\n", Fresult);
 
+Vresult = atoi("-2147483648");
+Fresult = ft_atoi("-2147483648");
+printf("\nVrai : '-2147483648' : %d", Vresult);
+printf("\nFaux : '-2147483648' : %d\n", Fresult);
+
+Vresult = atoi("2147483647");
+Fresult = ft_atoi("2147483647");
+printf("\nVrai : '2147483647' : %d", Vresult);
+printf("\nFaux : '2147483647' : %d\n", Fresult);
+
+Vresult = atoi("     -123a456");
+Fresult = ft_atoi("     -123a456");
+printf("\nVrai : '     -123a456' : %d", Vresult);
+printf("\nFaux : '     -123a456' : %d\n", Fresult);
+
+Vresult = atoi("\n\f\v\r\t     -   1");
+Fresult = ft_atoi("\n\f\v\r\t     -   1");
+printf("\nVrai : '\n\f\v\r\t     -   1' : %d", Vresult);
+printf("\nFaux : '\n\f\v\r\t     -   1' : %d\n", Fresult);
+
+printf("\n======================== ft_atoi check ===========================\n");
+*/
+/*
+printf("======================== ft_calloc check =========================\n");
+
+char	*ptr = NULL;
+
+ptr = ft_calloc(10, sizeof(char));
+if (!ptr)
+	return (0);
+printf("%s", ptr);
+
+free(ptr);
+
+printf("======================== ft_calloc check =========================\n");
+*/
+
+printf("\n======================== ft_strdup check =========================\n");
+
+char	*Fptr;
+char	*Vptr;
+
+Vptr = ft_strdup("This-is-the-string-to-copy");
+Fptr = ft_strdup("This-is-the-string-to-copy");
+printf("\nVrai : '%s'", Vptr);
+printf("\nFaux : '%s'", Fptr);
+free(Vptr);
+free(Fptr);
+
+Vptr = ft_strdup("");
+Fptr = ft_strdup("");
+printf("\nVrai : '%s'", Vptr);
+printf("\nFaux : '%s'", Fptr);
+free(Vptr);
+free(Fptr);
+
+Vptr = ft_strdup("                                    ");
+Fptr = ft_strdup("                                    ");
+printf("\nVrai : '%s'", Vptr);
+printf("\nFaux : '%s'", Fptr);
+free(Vptr);
+free(Fptr);
+
+Vptr = ft_strdup("                          \r\r\n          ");
+Fptr = ft_strdup("                          \r\r\n          ");
+printf("\nVrai : '%s'", Vptr);
+printf("\nFaux : '%s'", Fptr);
+free(Vptr);
+free(Fptr);
+
+printf("\n======================== ft_strdup check =========================\n");
 	return (0);
 }

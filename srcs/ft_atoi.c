@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 22:14:01 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/13 23:01:25 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/14 10:25:57 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -28,13 +28,29 @@
 
 int	ft_atoi(const char *str)
 {
-
-	char	*str;
-	int		i;
+	char		*string;
+	int			i;
+	long int	result;
+	long int	neg;
 
 	i = 0;
-	str = ()
-
+	neg = 1;
+	result = 0;
+	string = (char *)str;
+	while (ft_isspace(string[i]))
+		i++;
+	if ((string[i] == '-') || (string [i] == '+'))
+	{
+		if (string[i] == '-')
+			neg = -1;
+		i++;
+	}
+	while ((string[i]) && ft_isdigit(string[i]))
+	{
+		result = result + (string[i] - '0');
+		i++;
+		result = result * 10;
+	}
+	result = result / 10;
+	return ((int)result * neg);
 }
-
-
