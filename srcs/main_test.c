@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/14 22:55:40 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/15 09:31:42 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1008,13 +1008,9 @@ printf("\n======================== ft_memccpy check =========================\n"
 	printf("\nFaux ptr  : '%p'", Fptr);
 	printf("\nFaux ptr  : '%s'", Fptr);
 
-
-
-
-
 printf("\n======================== ft_memccpy check =========================\n");
 */
-
+/*
 printf("\n======================== ft_substr check =========================\n");
 
 	char	str[] = "This-is-the-string-to-get-substring";
@@ -1057,19 +1053,33 @@ printf("\n======================== ft_substr check =========================\n")
 	printf("\nResult : '%s' - start 0, len 0\n", ptr_to_substr);
 	free(ptr_to_substr);
 
-
-
-
-
-
-
-
-
-
-
-
-
 printf("\n======================== ft_substr check =========================\n");
+*/
+
+printf("\n======================== ft_strjoin check =========================\n");
+
+char	*result;
+
+result = ft_strjoin("This is a string", " and this is another");
+printf("\nresult : '%s'", result);
+free(result);
+
+result = ft_strjoin("", " and this is another");
+printf("\nresult : '%s'", result);
+free(result);
+
+result = ft_strjoin("", "");
+printf("\nresult : '%s'", result);
+free(result);
+
+result = ft_strjoin("", "z");
+printf("\nresult : '%s'", result);
+free(result);
+
+printf("\n======================== ft_strjoin check =========================\n");
+
+
+
 
 	return (0);
 }

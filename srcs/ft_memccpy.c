@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:04:24 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/14 18:58:29 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/15 08:40:35 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -46,7 +46,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		dest[i] = str[i];
 		if (str[i] == c)
 		{
-			return (&dst[i + 1]);
+			return (&dest[i + 1]);
 		}
 		i++;
 	}
