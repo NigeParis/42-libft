@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/15 13:21:46 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/15 18:12:03 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1084,7 +1084,7 @@ printf("\n======================== ft_strtrim check =========================\n"
 	char	*result;
 
 	result = NULL;
-	result = ft_strtrim("hekllo-This-is-a-sentence-hello", "hello");
+	result = ft_strtrim("hekllo-sentence", "hello");
 
 	printf("\nresult : '%s'", result);
 	free(result);

@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 09:37:29 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/15 14:51:17 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/15 18:20:14 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -31,7 +31,7 @@ static int ft_isfound(char c, char *set)
 	int i;
 
 	i = 0;
-	while (set[i])
+	while (set[i] != '\0')
 	{
 		if (c == set[i])
 			return (1);
@@ -51,6 +51,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	stop;
 	size_t	i;
+	size_t	j;
 
 	i = 0;
 	start = 0;
@@ -58,30 +59,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	find = (char *)set;
 	stop = ft_strlen(str);
 	newstr = (char *)ft_calloc(stop + 1, sizeof(char));
-	ft_memset(newstr, '.', stop);
-
-	while (str[start])
-	{
-		if(ft_isfound(str[start], find))
-		{
-			start++;
-		}
-		else
-			break ;
-	}
-
-	ft_putnbr_fd(start, 1);
-	
-	str = &str[stop];
-	ft_putnbr_fd(stop, 1);
-	while (ft_isfound(*str, find))
-	{
-		str--;
-		stop--;
-	}
-
-	ft_putnbr_fd(stop, 1);
-
+	while (ft_isfound(str[start], find))
+		start++;
+	j = start;
+	while (ft_isfound(*(str + (stop - j)), find))
+		j++;
+	stop-= j;
 	while (start < stop)
 	{
 		newstr[i] = str[start];
@@ -89,8 +72,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 
 	}
-
-	newstr[i - 1] = 'H';
 	newstr[i] = '\0';
 
 	return (newstr);	
