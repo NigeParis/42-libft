@@ -6,7 +6,7 @@
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:19:06 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/15 09:16:01 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/15 10:14:28 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,5 @@ char	*ft_strdup(const char *s1);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 #endif
