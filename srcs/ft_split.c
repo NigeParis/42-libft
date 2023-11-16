@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:55:07 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/16 16:53:25 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/16 17:44:29 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -29,6 +29,34 @@
 
 #include "libft.h"
 
+static char	**ft_alloc_split_mem(char **str, size_t nb_words, size_t nb_chars);
+
+
+size_t ft_nb_words_to_split(char const *str, char word_end)
+{
+	size_t i;
+	size_t j;
+	size_t count;
+
+	i = 0;
+	j = 0;
+	count = 0;
+	while (str[i] != '\0')
+	{
+		while (str[j] != word_end)
+			j++;
+		count++;
+		j = 0;
+		i++;
+	}
+	return (count);
+}
+
+
+
+
+
+
 char	**ft_split(char const *s, char c)
 {
 	char		**str;
@@ -41,19 +69,30 @@ char	**ft_split(char const *s, char c)
 	string = (char*)s;
 	len = ft_strlen(s);
 	str = NULL;
-	nb_words = 3 + 1;
+	nb_words = ft_nb_words_to_split(s, c);
 	nb_char_in_words = 3;
 	i = 0;
-	
 
-	printf("\nstring = '%s'", string);
+	str = ft_alloc_split_mem(str, nb_words, 4);
+
 	printf("\nlength = '%zu'", len);
+	printf("\nstring = '%s'", string);
+	printf("\nchar = '%C'", c);
 
-	str = (char **)calloc(nb_words,  sizeof(*str));
+	return (str);
+}
 
+
+
+static char	**ft_alloc_split_mem(char **str, size_t nb_words, size_t nb_chars)
+{
+	size_t		i;
+	
+	i = 0;
+	str = (char **)ft_calloc(nb_words,  sizeof(*str));
 	while (i < nb_words)
 	{
-		str[i] = (char *)calloc(nb_char_in_words,  sizeof(*str));
+		str[i] = (char *)ft_calloc(nb_chars,  sizeof(*str));
 		if (!(str[i]))
 		{
 			while (i > 0)
@@ -61,29 +100,21 @@ char	**ft_split(char const *s, char c)
 			free(str);
 			return (NULL);
 		}
-
 		i++;
 	}
 
-
 	str[0][0] = 'k';
-	str[0][1] = c;
+	str[0][1] = 'a';
 	str[0][2] = '\0';
 
 	str[1][0] = 'M';
-	str[1][1] = c;
+	str[1][1] = 'b';
 	str[1][2] = '\0';
 
 	str[2][0] = 'x';
-	str[2][1] = c;
+	str[2][1] = 'c';
 	str[2][2] = '\0';
 
-		
-	printf("%c", str[0][1]);
-
 	return (str);
-	
-
-
 }
 
