@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:55:07 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/16 18:03:24 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:21:30 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -30,35 +30,21 @@
 #include "libft.h"
 
 static char	**ft_alloc_split_mem(char **str, size_t nb_words, size_t nb_chars);
+static size_t ft_nb_words_to_split(char const *str, char word_end);
 
-
-size_t ft_nb_words_to_split(char const *str, char word_end)
+size_t	ft_nb_chars_word(char *word_ptr, char word_end)
 {
-	size_t i;
-	size_t j;
-	size_t count;
+	size_t	nb_of_chars;
 
-	i = 0;
-	j = 0;
-	count = 0;
-	if (str[i] == word_end)
-		count++;
-	while (str[i] != '\0')
+	nb_of_chars = 0;
+	while ((*word_ptr != word_end) || (*word_ptr != '\0'))
 	{
-		while (str[i + j] != word_end)
-		{
-			j++;
-			if (str[i + j] == '\0')
-				break ;
-		}
-		i = i + j;
-		count++;
-		j = 0;
-		i++;
+		word_ptr++;
+		nb_of_chars++;
 	}
-	return (count);
-}
+	return (nb_of_chars);
 
+}
 
 
 
@@ -89,8 +75,6 @@ char	**ft_split(char const *s, char c)
 
 	return (str);
 }
-
-
 
 static char	**ft_alloc_split_mem(char **str, size_t nb_words, size_t nb_chars)
 {
@@ -125,4 +109,33 @@ static char	**ft_alloc_split_mem(char **str, size_t nb_words, size_t nb_chars)
 
 	return (str);
 }
+
+static size_t ft_nb_words_to_split(char const *str, char word_end)
+{
+	size_t i;
+	size_t j;
+	size_t count;
+
+	i = 0;
+	j = 0;
+	count = 0;
+	if (str[i] == word_end)
+		count++;
+	while (str[i] != '\0')
+	{
+		while (str[i + j] != word_end)
+		{
+			j++;
+			if (str[i + j] == '\0')
+				break ;
+		}
+		i = i + j;
+		count++;
+		j = 0;
+		i++;
+	}
+	return (count);
+}
+
+
 
