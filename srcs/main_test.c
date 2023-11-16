@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/16 13:17:25 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/16 17:01:28 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1078,7 +1078,7 @@ free(result);
 
 printf("\n======================== ft_strjoin check =========================\n");
 */
-
+/*
 printf("\n======================== ft_strtrim check =========================\n");
 
 	char	*result;
@@ -1094,5 +1094,24 @@ printf("\n======================== ft_strtrim check =========================\n"
 
 
 printf("\n======================== ft_strtrim check =========================\n");
+*/
+
+
+printf("\n======================== ft_split check =========================\n");
+
+	char	str[] = "this is the string;to separate;third";
+	char	**result = NULL;
+
+	printf("\n String : %s", str);
+
+	result = ft_split(str, ';'); 
+
+	printf("\nString : %s", result[0]);
+
+	free(result);
+
+
+printf("\n======================== ft_split check =========================\n");
+
 	return (0);
 }
