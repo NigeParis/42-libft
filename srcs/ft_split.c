@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:55:07 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/16 17:44:29 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:03:24 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -41,10 +41,17 @@ size_t ft_nb_words_to_split(char const *str, char word_end)
 	i = 0;
 	j = 0;
 	count = 0;
+	if (str[i] == word_end)
+		count++;
 	while (str[i] != '\0')
 	{
-		while (str[j] != word_end)
+		while (str[i + j] != word_end)
+		{
 			j++;
+			if (str[i + j] == '\0')
+				break ;
+		}
+		i = i + j;
 		count++;
 		j = 0;
 		i++;
@@ -75,9 +82,10 @@ char	**ft_split(char const *s, char c)
 
 	str = ft_alloc_split_mem(str, nb_words, 4);
 
-	printf("\nlength = '%zu'", len);
-	printf("\nstring = '%s'", string);
-	printf("\nchar = '%C'", c);
+	printf("\nlength.....'%zu'", len);
+	printf("\nnb_words...'%zu'", nb_words);
+	printf("\nstring......'%s'", string);
+	printf("\nseparateur..'%c'", c);
 
 	return (str);
 }
