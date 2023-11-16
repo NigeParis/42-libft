@@ -6,13 +6,14 @@
 /*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:19:06 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/15 10:14:28 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/16 12:51:06 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 

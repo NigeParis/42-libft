@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 09:37:29 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/15 18:20:14 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/16 13:51:55 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -26,9 +26,9 @@
 
 #include "libft.h"
 
-static int ft_isfound(char c, char *set)
+static int	ft_isfound(char c, char const *set)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (set[i] != '\0')
@@ -40,49 +40,29 @@ static int ft_isfound(char c, char *set)
 	return (0);
 }
 
-
-
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str;
-	char	*find;
 	char	*newstr;
 	size_t	start;
 	size_t	stop;
 	size_t	i;
 	size_t	j;
 
+	j = 0;
 	i = 0;
 	start = 0;
-	str = (char *)s1;
-	find = (char *)set;
-	stop = ft_strlen(str);
-	newstr = (char *)ft_calloc(stop + 1, sizeof(char));
-	while (ft_isfound(str[start], find))
+	stop = ft_strlen(s1);
+	newstr = (char *)ft_calloc((ft_strlen(s1) + 1), sizeof(char));
+	while (ft_isfound(s1[start], set))
 		start++;
-	j = start;
-	while (ft_isfound(*(str + (stop - j)), find))
+	while (ft_isfound(s1[stop - j - 1], set))
 		j++;
-	stop-= j;
-	while (start < stop)
+	while (start < stop - j)
 	{
-		newstr[i] = str[start];
-		start++;
+		newstr[i] = s1[start];
 		i++;
-
+		start++;
 	}
 	newstr[i] = '\0';
-
-	return (newstr);	
+	return (newstr);
 }
-
-
-
-
-
-
-
-
-
-
