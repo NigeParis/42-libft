@@ -8,6 +8,7 @@ SRCS=$(addprefix $(SRC_DIR), $(SRC))
 OBJ=$(SRC:.c=.o)
 HEAD=$(addprefix $(INCLUDE), $(HEADER))
 CC=cc
+CCOPTIONS=-c -g
 MAIN_SRC=$(addprefix $(SRC_DIR), $(MAIN))
 MAIN_OBJ=$(addprefix $(OBJ_DIR), $(MAIN))
 SRC_OBJ=$(addprefix $(OBJ_DIR), $(OBJ))
@@ -44,8 +45,8 @@ $(NAME): $(OBJ)
 	cc $(OBJ) $(MAIN_OBJ).o -o $(NAME)
 $(OBJ):
 	@echo "\nCOMPILE all c files to .o FILES .......\n"
-	$(CC) $(CFLAGS) -c -g $(SRCS) -I $(HEAD)
-	$(CC) $(CFLAGS) -c -g $(MAIN_SRC).c -I$(HEAD) -o $(MAIN_OBJ).o
+	$(CC) $(CFLAGS) $(CCOPTIONS) $(SRCS) -I $(HEAD)
+	$(CC) $(CFLAGS) $(CCOPTIONS) $(MAIN_SRC).c -I$(HEAD) -o $(MAIN_OBJ).o
 
 clean:
 	rm -f $(SRC_OBJ) $(MAIN_OBJ).o *.o

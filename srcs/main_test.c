@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/16 18:09:47 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/17 17:33:21 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1099,15 +1099,21 @@ printf("\n======================== ft_strtrim check =========================\n"
 
 printf("\n======================== ft_split check =========================\n");
 
-	char	str[] = "this is the; string to; separate third";
+	char	str[] = "four;fiveirr;one";
+	size_t	i;
+
+	i  = 0;
 	char	**result = NULL;
 
 	printf("\nString begin       : '%s'", str);
 
 	result = ft_split(str, ';'); 
 
-	printf("\nResult output main : '%s'", result[0]);
-
+	while (i < 3)
+	{
+		printf("\nResult output main : '%s'", result[i]);
+		i++;
+	}
 	free(result);
 
 
