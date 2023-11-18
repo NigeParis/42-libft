@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:55:07 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/17 18:02:04 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/18 06:08:25 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -29,44 +29,42 @@
 
 #include "libft.h"
 
-static size_t ft_nb_words_to_split(char const *str, char word_end);
-size_t	ft_nb_chars_word(const char *s, char word_end);
-
+static size_t ft_nb_words(char const *str, char divider);
+size_t	ft_nb_chars_word(const char *s, char split);
 
 
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	next;
-	size_t	nb_chars;
+	size_t	chars;
 	char	**str;
 
 	i = 0;
 	next = 0;
-	if (!(str = ft_calloc((ft_nb_words_to_split(s, c)), sizeof(char *))))
+	if (!(str = (char **)ft_calloc((ft_nb_words(s, c) + 1), sizeof(char **))))
 		return (NULL);
 	while (s[i] != '\0')
 	{
 		while (s[i] == c)
 			i++;
-		nb_chars = ft_nb_chars_word(&s[i], c);
-		if (nb_chars > 0)
+		chars = ft_nb_chars_word(&s[i], c);
+		if (chars > 0)
 		{
-			if (!(*(str + next) = ft_calloc(nb_chars + 1, sizeof(char))))
-			if (!str)
-				return (0);	
-			ft_strlcpy(str[next], &s[i], nb_chars + 1);
+			if (!(*(str + next) = (char *)ft_calloc(chars + 1, sizeof(char))))
+				return (NULL);	
+			ft_memcpy(str[next], &s[i], chars);
+			i = i + chars;
 			next++;
-			i = i + nb_chars;
 		}
 	}
-	str[next] = 0;
+	str[next] = NULL;
 	return (str);
 
 }
 
 
-static size_t ft_nb_words_to_split(char const *str, char word_end)
+static size_t ft_nb_words(char const *str, char split)
 {
 	size_t i;
 	size_t count;
@@ -75,7 +73,9 @@ static size_t ft_nb_words_to_split(char const *str, char word_end)
 	count = 0;
 	while (str[i] != '\0')
 	{
-			if ((str[i] == word_end) && ((str[i - 1] != word_end) || i == 0)) 
+
+        if ((str[i] != split) && ((str[i + 1] == split) || str[i + 1] == '\0'))
+
 				count++;
 			i++;
 	}
@@ -83,16 +83,12 @@ static size_t ft_nb_words_to_split(char const *str, char word_end)
 	return (count);
 }
 
-size_t	ft_nb_chars_word( const char *s, char word_end)
+size_t	ft_nb_chars_word( const char *s, char split)
 {
 	size_t	i;
-	char *str;
 
-	str = (char *)s;
 	i = 0;
-	while (s[i] && s[i] != word_end)
+	while (s[i] && s[i] != split)
 		i++;
 	return (i);
 }
-
-

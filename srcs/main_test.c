@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/17 17:33:21 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/18 05:49:34 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1099,20 +1099,20 @@ printf("\n======================== ft_strtrim check =========================\n"
 
 printf("\n======================== ft_split check =========================\n");
 
-	char	str[] = "four;fiveirr;one";
-	size_t	i;
-
-	i  = 0;
+	char	str[] = "lorem.ip.sum.do.l";
+	size_t i = 0;
 	char	**result = NULL;
 
 	printf("\nString begin       : '%s'", str);
 
-	result = ft_split(str, ';'); 
-
-	while (i < 3)
+	result = ft_split(str, '.'); 
+  if (result != NULL) 
 	{
-		printf("\nResult output main : '%s'", result[i]);
-		i++;
+        while (result[i] != NULL && i < 20) 
+		{
+            printf("\nResult output main : '%s'", result[i]);
+            i++;
+        }
 	}
 	free(result);
 
