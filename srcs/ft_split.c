@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:55:07 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/18 07:31:26 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/18 07:33:35 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -30,7 +30,7 @@
 #include "libft.h"
 
 static size_t	ft_nb_words(char const *str, char divider);
-static size_t			ft_nb_chars(const char *s, char split);
+static size_t	ft_nb_chars(const char *s, char split);
 
 char	**ft_split(char const *s, char c)
 {
