@@ -17,15 +17,15 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 
 ### Libc
 
-|  |  |  Functions  |
-|---|---|-------------|
+|  |  |  Functions  |     |                        |
+|---|---|-------------|---|------------------------|
 |  |  | [`ft_isalpha`]()  | int ft_isalpha(int c); |
-|  |  | [`ft_isdigit`]()  |
-|  |  | [`ft_isalnum`]()  |
-|  |  | [`ft_isascii`]()  |
-|  |  | [`ft_isprint`]()  |
-|  |  | [`ft_toupper`]()  |
-|  |  | [`ft_tolower`]()  |
+|  |  | [`ft_isdigit`]()  |                        |
+|  |  | [`ft_isalnum`]()  |                        |
+|  |  | [`ft_isascii`]()  |                        |
+|  |  | [`ft_isprint`]()  |                        |
+|  |  | [`ft_toupper`]()  |                        |
+|  |  | [`ft_tolower`]()  |                        |
 |  |  | [`ft_bzero`]()  |
 |  |  | [`ft_memset`]()  |
 |  |  | [`ft_strlen`]()  |
