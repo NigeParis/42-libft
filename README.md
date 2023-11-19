@@ -48,7 +48,7 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 
 |   |   |  Functions      | prototypes             |  |
 |---|---|-------------|---|------------------------|
-|   |   | [`ft_putchar`]()  |
+|   |   | [`ft_putchar`]()  |void	ft\_putchar(char c) |
 |   |   | [`ft_putchar_fd`]()  |
 |   |   | [`ft_putstr`]()  |
 |   |   | [`ft_putstr_fd`]()  |
