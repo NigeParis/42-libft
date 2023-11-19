@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/19 21:35:13 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/19 22:18:34 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1122,22 +1122,61 @@ printf("\n======================== ft_split check =========================\n");
 	free(result);
 printf("\n======================== ft_split check =========================\n");
 */
-
+/*
 printf("\n======================== ft_itoa check =========================\n");
 
-	int		nb = -2147483647;
+	int		nb = 0;
+	int		nb1 = -2147483648;
+	int		nb2 = -2147483647;
+	int		nb3 = -1;
+	int		nb4 = -1;
+	int		nb5 = -42;
+	int		nb6 = -0;
+	int		nb7 = +21474;
 	char	*ptr;
 
 	printf("\nnumber : %d", nb);
-
 	ptr = ft_itoa(nb);	
+	printf("\nstring : %s\n", ptr);
+	free(ptr);
 
-	printf("\nstring : %s", ptr);
+	printf("\nnumber : %d", nb1);
+	ptr = ft_itoa(nb1);	
+	printf("\nstring : %s\n", ptr);
+	free(ptr);
 
+	printf("\nnumber : %d", nb2);
+	ptr = ft_itoa(nb2);	
+	printf("\nstring : %s\n", ptr);
+	free(ptr);
+
+	printf("\nnumber : %d", nb3);
+	ptr = ft_itoa(nb3);	
+	printf("\nstring : %s\n", ptr);
+	free(ptr);
+
+	printf("\nnumber : %d", nb4);
+	ptr = ft_itoa(nb4);	
+	printf("\nstring : %s\n", ptr);
+	free(ptr);
+
+	printf("\nnumber : %d", nb5);
+	ptr = ft_itoa(nb5);	
+	printf("\nstring : %s\n", ptr);
+	free(ptr);
+
+	printf("\nnumber : %d", nb6);
+	ptr = ft_itoa(nb6);	
+	printf("\nstring : %s\n", ptr);
+	free(ptr);
+
+	printf("\nnumber : +%d", nb7);
+	ptr = ft_itoa(nb7);	
+	printf("\nstring : %s\n", ptr);
 	free(ptr);
 
 printf("\n======================== ft_itoa check =========================\n");
-
+*/
 
 	return (0);
 }
