@@ -27,7 +27,7 @@ SRC+=ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c
 SRC+=ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c
 SRC+=ft_memcmp.c ft_strnstr.c ft_atoi.c ft_isspace.c ft_calloc.c
 SRC+=ft_strdup.c ft_memccpy.c ft_substr.c ft_strjoin.c ft_strtrim.c
-SRC+=ft_split.c
+SRC+=ft_split.c ft_itoa.c
 HEADER=libft.h
 MAIN=main_test
 
