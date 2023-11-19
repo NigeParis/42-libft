@@ -33,10 +33,10 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 |  |  | [`ft_strrchr`]()  | char \*ft\_strrchr(const char \*s, int c); |
 |  |  | [`ft_calloc`]()  | void	\*ft\_calloc(size\_t count, size\_t size); |
 |  |  | [`ft_atoi`]()  | int	ft\_atoi(const char \*str) |
-|  |  | [`ft_strlcpy`]()  |
-|  |  | [`ft_strdup`]() |
-|  |  | [`ft_memcpy`]()  |
-|  |  | [`ft_memccpy`]()  |
+|  |  | [`ft_strlcpy`]()  |size\_t	ft\_strlcpy(char \*dst, const char \*src, size\_t dstsize) |
+|  |  | [`ft_strdup`]() |char	\*ft\_strdup(const char \*s1) |
+|  |  | [`ft_memcpy`]()  | void	\*ft\_memcpy(void \*dest, const void \*src, size\_t n) |
+|  |  | [`ft_memccpy`]()  |void	\*ft\_memccpy(void \*dst, const void \*src, int c, size\_t n) |
 |  |  | [`ft_memcmp`]()  |
 |  |  | [`ft_strncmp`]()  |
 |  |  | [`ft_strlcat`]()  | size\_t	ft\_strlcat(char \*dst, const char \*src, size\_t dstsize);|
