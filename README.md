@@ -21,14 +21,17 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 |---|---|-------------|---|------------------------|
 |  |  | [`ft_isalpha`]()  | int ft_isalpha(int c); |
 |  |  | [`ft_isdigit`]()  | int ft_isdigit(int c); |
-|  |  | [`ft_isalnum`]()  |                        |
-|  |  | [`ft_isascii`]()  |                        |
-|  |  | [`ft_isprint`]()  |                        |
-|  |  | [`ft_toupper`]()  |                        |
-|  |  | [`ft_tolower`]()  |                        |
-|  |  | [`ft_bzero`]()  |
-|  |  | [`ft_memset`]()  |
-|  |  | [`ft_strlen`]()  |
+|  |  | [`ft_isalnum`]()  | int ft_isalnum(int c); |
+|  |  | [`ft_isascii`]()  | int ft_isascii(int c); |
+|  |  | [`ft_isprint`]()  | int ft_isprint(int c); |
+|  |  | [`ft_toupper`]()  | int ft_toupper(int c); |
+|  |  | [`ft_tolower`]()  | int ft_islower(int c); |
+|  |  | [`ft_bzero`]()  | void ft_bzero(void *s, size_t n); |
+
+|  |  | [`ft_memset`]()  | void *ft_memset(void *b, int c, size_t len); |
+
+|  |  | [`ft_strlen`]()  | size_t strlen(const char *s); |
+
 |  |  | [`ft_strchr`]()  |
 |  |  | [`ft_strrchr`]()  |
 |  |  | [`ft_calloc`]()  |
