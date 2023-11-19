@@ -26,7 +26,7 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 |  |  | [`ft_isprint`]()  | int ft_isprint(int c); |
 |  |  | [`ft_toupper`]()  | int ft_toupper(int c); |
 |  |  | [`ft_tolower`]()  | int ft_islower(int c); |
-|  |  | [`ft_bzero`]()  | void ft_bzero(void *s, size_t n); |
+|  |  | [`ft_bzero`]()  | void ft_bzero(void \*s, size_t n); |
 
 |  |  | [`ft_memset`]()  | void *ft_memset(void *b, int c, size_t len); |
 
