@@ -19,17 +19,18 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 
 |   |   |  Functions      | prototypes             |  |
 |---|---|-------------|---|------------------------|
-|  |  | [`ft_isalpha`]()  | int ft_isalpha(int c); |
-|  |  | [`ft_isdigit`]()  | int ft_isdigit(int c); |
-|  |  | [`ft_isalnum`]()  | int ft_isalnum(int c); |
-|  |  | [`ft_isascii`]()  | int ft_isascii(int c); |
-|  |  | [`ft_isprint`]()  | int ft_isprint(int c); |
-|  |  | [`ft_toupper`]()  | int ft_toupper(int c); |
-|  |  | [`ft_tolower`]()  | int ft_islower(int c); |
-|  |  | [`ft_bzero`]()  | void ft_bzero(void \*s, size_t n); |
-|  |  | [`ft_memset`]()  | void \*ft_memset(void \*b, int c, size_t len); |
-|  |  | [`ft_strlen`]()  | size_t strlen(const char \*s); |
-|  |  | [`ft_strchr`]()  |
+|  |  | [`ft_isalpha`]()  | int ft\_isalpha(int c); |
+|  |  | [`ft_isdigit`]()  | int ft\_isdigit(int c); |
+|  |  | [`ft_isalnum`]()  | int ft\_isalnum(int c); |
+|  |  | [`ft_isascii`]()  | int ft\_isascii(int c); |
+|  |  | [`ft_isprint`]()  | int ft\_isprint(int c); |
+|  |  | [`ft_toupper`]()  | int ft\_toupper(int c); |
+|  |  | [`ft_tolower`]()  | int ft\_islower(int c); |
+|  |  | [`ft_bzero`]()  | void ft\_bzero(void \*s, size\_t n); |
+|  |  | [`ft_memset`]()  | void \*ft\_memset(void \*b, int c, size\_t len); |
+|  |  | [`ft_strlen`]()  | size\_t strlen(const char \*s); |
+|  |  | [`ft_strchr`]()  | char \*ft\_strrchr(const char \*s, int c);
+
 |  |  | [`ft_strrchr`]()  |
 |  |  | [`ft_calloc`]()  |
 |  |  | [`ft_atoi`]()  |
@@ -39,7 +40,7 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 |  |  | [`ft_memccpy`]()  |
 |  |  | [`ft_memcmp`]()  |
 |  |  | [`ft_strncmp`]()  |
-|  |  | [`ft_strlcat`]()  | size_t	ft_strlcat(char \*dst, const char \*src, size_t dstsize);|
+|  |  | [`ft_strlcat`]()  | size\_t	ft\_strlcat(char \*dst, const char \*src, size\_t dstsize);|
 |  |  | [`ft_strnstr`]()  |
 |  |  | [`ft_memchr`]()  |
 |  |  | [`ft_memmove`]()  |
