@@ -39,7 +39,7 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 |  |  | [`ft_memccpy`]()  |void   \*ft\_memccpy(void \*dst, const void \*src, int c, size\_t n) |
 |  |  | [`ft_memcmp`]()  |int	ft\_memcmp(const void \*s1, const void \*s2, size\_t n) |
 |  |  | [`ft_strncmp`]()  |int	ft\_strncmp(const char \*s1, const char \*s2, size\_t n) |
-|  |  | [`ft_strlcat`]()  | size\_t	ft\_strlcat(char \*dst, const char \*src, size\_t dstsize);|
+|  |  | [`ft_strlcat`]()  | size\_t\	ft\_strlcat(char \*dst, const char \*src, size\_t dstsize);|
 |  |  | [`ft_strnstr`]()  |
 |  |  | [`ft_memchr`]()  |
 |  |  | [`ft_memmove`]()  |
