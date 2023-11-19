@@ -17,7 +17,7 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 
 ### Libc
 
-|   |   |  Functions      | prototypes             |  |
+|   |   |  Functions      | Prototypes             |  |
 |---|---|-------------|---|------------------------|
 |  |  | [`ft_isalpha`]()  | int ft\_isalpha(int c) |
 |  |  | [`ft_isdigit`]()  | int ft\_isdigit(int c) |
@@ -46,7 +46,7 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 
 ### Extension
 
-|   |   |  Functions      | prototypes             |  |
+|   |   |  Functions      | Prototypes             |  |
 |---|---|-------------|---|------------------------|
 |   |   | [`ft_putchar`]()  |void	ft\_putchar(char c) |
 |   |   | [`ft_putchar_fd`]()  |void	ft\_putchar\_fd(char c, int fd) |
