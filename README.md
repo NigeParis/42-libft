@@ -36,9 +36,9 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 |  |  | [`ft_strlcpy`]()  |size\_t	ft\_strlcpy(char \*dst, const char \*src, size\_t dstsize) |
 |  |  | [`ft_strdup`]() |char	\*ft\_strdup(const char \*s1) |
 |  |  | [`ft_memcpy`]()  | void	\*ft\_memcpy(void \*dest, const void \*src, size\_t n) |
-|  |  | [`ft_memccpy`]()  |void	\*ft\_memccpy(void \*dst, const void \*src, int c, size\_t n) |
-|  |  | [`ft_memcmp`]()  |
-|  |  | [`ft_strncmp`]()  |
+|  |  | [`ft_memccpy`]()  |void\ \*ft\_memccpy(void \*dst, const void \*src, int c, size\_t n) |
+|  |  | [`ft_memcmp`]()  |int	ft\_memcmp(const void \*s1, const void \*s2, size\_t n) |
+|  |  | [`ft_strncmp`]()  |int	ft\_strncmp(const char \*s1, const char \*s2, size\_t n) |
 |  |  | [`ft_strlcat`]()  | size\_t	ft\_strlcat(char \*dst, const char \*src, size\_t dstsize);|
 |  |  | [`ft_strnstr`]()  |
 |  |  | [`ft_memchr`]()  |
