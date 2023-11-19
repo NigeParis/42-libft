@@ -58,7 +58,7 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 |   |   | [`ft_strjoin`](/srcs/ft_strjoin.c)  | char	\*ft\_strjoin(char const \*s1, char const \*s2) |
 |   |   | [`ft_strtrim`](/srcs/ft_strtrim.c)  | char	\*ft\_strtrim(char const \*s1, char const \*set) |
 |   |   | [`ft_split`](/srcs/ft_split.c)  | char \*\*ft\_split(char const \*s, char c) |
-|   |   | [`ft_itoa`]()  |
+|   |   | [`ft_itoa`](/srcs/ft_itoa.c)  | char \*ft\_itoa(int n); |
 |   |   | [`ft_strmapi`]()  |
 |   |   | [`ft_striteri`]()  |
 
