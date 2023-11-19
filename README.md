@@ -54,10 +54,10 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 |   |   | [`ft_putstr_fd`]()  |void	ft\_putstr\_fd(char \*s, int fd) |
 |   |   | [`ft_putendl_fd`]()  |void	ft\_putendl\_fd(char \*s, int fd) |
 |   |   | [`ft_putnbr_fd`]()  | void	ft\_putnbr\_fd(int n, int fd) |
-|   |   | [`ft_substr`]()  |
-|   |   | [`ft_strjoin`]()  |
-|   |   | [`ft_strtrim`]()  |
-|   |   | [`ft_split`]()  |
+|   |   | [`ft_substr`]()  | char	\*ft\_substr(char const \*s, unsigned int start, size\_t len) |
+|   |   | [`ft_strjoin`]()  | char	\*ft\_strjoin(char const \*s1, char const \*s2) |
+|   |   | [`ft_strtrim`]()  | char	\*ft\_strtrim(char const \*s1, char const \*set) |
+|   |   | [`ft_split`]()  | \*char \*\*ft\_split(char const \*s, char c) |
 |   |   | [`ft_itoa`]()  |
 |   |   | [`ft_strmapi`]()  |
 |   |   | [`ft_striteri`]()  |
