@@ -28,9 +28,9 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 |  |  | [`ft_tolower`]()  | int ft_islower(int c); |
 |  |  | [`ft_bzero`]()  | void ft_bzero(void \*s, size_t n); |
 
-|  |  | [`ft_memset`]()  | void *ft_memset(void *b, int c, size_t len); |
+|  |  | [`ft_memset`]()  | void \*ft_memset(void \*b, int c, size_t len); |
 
-|  |  | [`ft_strlen`]()  | size_t strlen(const char *s); |
+|  |  | [`ft_strlen`]()  | size_t strlen(const char \*s); |
 
 |  |  | [`ft_strchr`]()  |
 |  |  | [`ft_strrchr`]()  |
@@ -42,7 +42,7 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 |  |  | [`ft_memccpy`]()  |
 |  |  | [`ft_memcmp`]()  |
 |  |  | [`ft_strncmp`]()  |
-|  |  | [`ft_strlcat`]()  | * size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);|
+|  |  | [`ft_strlcat`]()  | size_t	ft_strlcat(char \*dst, const char \*src, size_t dstsize);|
 
 |  |  | [`ft_strnstr`]()  |
 |  |  | [`ft_memchr`]()  |
