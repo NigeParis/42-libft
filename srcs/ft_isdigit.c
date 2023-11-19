@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrobinso <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 10:36:48 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/08 09:42:31 by nrobinso         ###   ########.fr       */
+/*   Created: 2023/11/19 15:57:34 by nrobinso          #+#    #+#             */
+/*   Updated: 2023/11/19 15:57:41 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 /**
 *   #include <ctype.h>
 * 	isdigit - int isdigit(int c);
