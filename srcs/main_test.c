@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/19 22:18:34 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/19 22:22:51 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1165,7 +1165,7 @@ printf("\n======================== ft_itoa check =========================\n");
 	printf("\nstring : %s\n", ptr);
 	free(ptr);
 
-	printf("\nnumber : %d", nb6);
+	printf("\nnumber : -%d", nb6);
 	ptr = ft_itoa(nb6);	
 	printf("\nstring : %s\n", ptr);
 	free(ptr);
