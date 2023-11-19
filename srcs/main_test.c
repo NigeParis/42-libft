@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/18 06:37:54 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/19 14:25:18 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1099,7 +1099,8 @@ printf("\n======================== ft_strtrim check =========================\n"
 
 printf("\n======================== ft_split check =========================\n");
 
-	char	str[] = "lorem.ip.sum.do.l";
+//	char	str[] = "lorem.ip.sum.do.l";
+	char	str[] = "";
 	size_t i = 0;
 	char	**result = NULL;
 
@@ -1114,16 +1115,11 @@ printf("\n======================== ft_split check =========================\n");
             i++;
         }
 	}
-
-		while (result[i] != NULL) 
-		{
-			free(result[i]);
-            i--;
-        }
-
-
-
-
+	while (i >= 0)
+	{
+		free(result[i]);
+		i--;
+	}
 	free(result);
 
 
