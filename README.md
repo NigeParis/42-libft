@@ -29,11 +29,10 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 |  |  | [`ft_bzero`]()  | void ft\_bzero(void \*s, size\_t n); |
 |  |  | [`ft_memset`]()  | void \*ft\_memset(void \*b, int c, size\_t len); |
 |  |  | [`ft_strlen`]()  | size\_t strlen(const char \*s); |
-|  |  | [`ft_strchr`]()  | char \*ft\_strrchr(const char \*s, int c);
-
-|  |  | [`ft_strrchr`]()  |
-|  |  | [`ft_calloc`]()  |
-|  |  | [`ft_atoi`]()  |
+|  |  | [`ft_strchr`]()  | char \*ft\_strchr(const char \*s, int c); |
+|  |  | [`ft_strrchr`]()  | char \*ft\_strrchr(const char \*s, int c); |
+|  |  | [`ft_calloc`]()  | void	\*ft\_calloc(size\_t count, size\_t size); |
+|  |  | [`ft_atoi`]()  | int	ft\_atoi(const char \*str) |
 |  |  | [`ft_strlcpy`]()  |
 |  |  | [`ft_strdup`]() |
 |  |  | [`ft_memcpy`]()  |
