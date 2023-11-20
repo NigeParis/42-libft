@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/20 18:48:35 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/20 23:32:07 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -384,17 +384,17 @@ while (i < ft_end)
 
 printf("\n=================== ft_ft_memcpy check ========================\n");
 */
-
 /*
+
 printf("\n=================== ft_ft_memmove check ========================\n");
 
 
-char a[] = "That's not what I said." ;
-char b[] = "That's not what I said." ;
-char c[] = "That's not what I said." ;
+char *a = (void;
+char *b = NULL;
+//char c[] = "";
 
-ft_memmove( a+7, a+11, 16 );      // Move 13 bytes, 'w' through '\0'
-memmove( b+7, b+11, 16 );         // Move 13 bytes, 'w' through '\0'
+ft_memmove( a, a, 2 );      // Move 13 bytes, 'w' through '\0'
+memmove( b, b, 0 );         // Move 13 bytes, 'w' through '\0'
 printf("\nVrai         : %s", b );
 printf("\nFaux         : %s", a );
 
@@ -849,19 +849,22 @@ printf ("\nfaux s1 = s2 = 0  '', '',                    n = 0 - result : %d", re
 
 printf("\n\n====================== ft_memcmp check ========================\n");
 */
-
+/*
 printf("\n\n====================== ft_strnstr check ========================\n");
 
-char	big[] = "aaabcabcd";
+//char	big[] = "aaabcabcd";
 char	little[] = "aabc";
+char	*big = "'\0'";
+//char	*little = NULL;
+//char	*Vresult;
 //char	*Vresult;
 char	*Fresult;
 
 //Vresult = strnstr(big, little, 10);
-Fresult = ft_strnstr(big + 1, little, -1);
+Fresult = ft_strnstr(big, little, 0);
 //printf("\nVrai : 'this is bithe big str', '',  - len = 10 -> %s", Vresult);
 printf("\nFaux : 'this is bithe big str', '',  - len = 10 -> %s\n", Fresult);
-/*
+
 //Vresult = strnstr(big, "big", 10);
 Fresult = ft_strnstr(big, "big", 10);
 //printf("\nVrai : 'this is bithe big str', 'big',  - len = 10 -> %s", Vresult);
@@ -886,9 +889,9 @@ printf("\nFaux : '', 'a',  - len = 1 -> %s\n", Fresult);
 Fresult = ft_strnstr("sma s sm smal smalll ex samall tec", "small", 200);
 //printf("\nVrai : 'sma s sm smal smalll ex samall tec', 'small',  - len = 1 -> %s", Vresult);
 printf("\nFaux : 'sma s sm smal smalll ex samall tec', 'small',  - len = 1 -> %s\n", Fresult);
-*/
-printf("\n\n====================== ft_strnstr check ========================\n");
 
+printf("\n\n====================== ft_strnstr check ========================\n");
+*/
 /*
 printf("\n\n====================== ft_atoi check ===========================\n");
 
@@ -1002,7 +1005,7 @@ free(Fptr);
 
 printf("\n======================== ft_strdup check =========================\n");
 */
-/*
+
 printf("\n======================== ft_memccpy check =========================\n");
 
 	char	src[] = "zyxwvutsrqponmlkjihgfedcba";
@@ -1026,7 +1029,7 @@ printf("\n======================== ft_memccpy check =========================\n"
 	printf("\nFaux ptr  : '%s'", Fptr);
 
 printf("\n======================== ft_memccpy check =========================\n");
-*/
+
 /*
 printf("\n======================== ft_substr check =========================\n");
 

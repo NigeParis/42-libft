@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 16:02:36 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/19 16:02:49 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/20 22:25:05 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*ptr_dest;
 	unsigned char	*ptr_src;
+	if (!dest && !src)
+		return (dest);
 
 	ptr_dest = (unsigned char *)dest;
 	ptr_src = (unsigned char *)src;
+
 	if (dest < src)
 	{
 		while (n--)

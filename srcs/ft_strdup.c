@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:34:39 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/14 15:55:04 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/20 23:28:01 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -27,22 +27,15 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char			*str;
-	char			*to_copy;
-	unsigned int	size;
-	int				i;
+	char	*str;
+	char	*to_copy;
+	size_t	size;
 
-	i = 0;
 	to_copy = (char *)s1;
-	size = ft_strlen(s1) + 1;
-	str = (char *)calloc(size, sizeof(char));
-	if (!str)
-		return (0);
-	while (to_copy[i])
-	{
-		str[i] = to_copy[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (&str[0]);
+	size = ft_strlen(s1);
+	str = (char *)ft_calloc(size + 1, sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	ft_strlcpy(str, to_copy, size + 1);	
+	return (str);
 }

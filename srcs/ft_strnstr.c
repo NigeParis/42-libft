@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:25:12 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/20 19:14:00 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/20 21:35:42 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -37,12 +37,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t		i;
 	size_t		j;
 
-	printf("%zu ----", len);
 	
 	str = (char *)big;
 	find = (char *)little;
 	if (len > ft_strlen(big))
-		len = ft_strlen(big);
+		len = ft_strlen(big) + 1;
 	i = 0;
 	j = 0;
 	if (!*find)
