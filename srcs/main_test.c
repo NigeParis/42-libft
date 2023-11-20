@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/19 22:22:51 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/20 09:57:52 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 #include <string.h>
 #include <stdlib.h>
 #define TABLEASCII 256
+
+
+char	ft_testfun_strmapi(unsigned int nb, char c);
+
+
 
 int	main(void)
 {
@@ -1177,6 +1182,64 @@ printf("\n======================== ft_itoa check =========================\n");
 
 printf("\n======================== ft_itoa check =========================\n");
 */
+/*
+printf("\n\n================== ft_strmapi check =======================\n");
+
+	char	s[] = "ABCDEFGHIJK";
+	char	r[] = "ACEGIKMOQSU";
+	char	*ptr = NULL;
+	size_t	size;
+	size_t	result;
+
+	size = ft_strlen(r);
+	result = -1;
+	printf("\n starting string...: %s", s);
+	printf("\n result should be..: %s", r);
+	printf("\n ===============================");
+
+	ptr = ft_strmapi(s, &ft_testfun_strmapi);
+	
+	printf("\n ptr...............: %s", ptr);
+
+	if (!ft_memcmp(ptr, r, size + 1))	
+		printf("\n\n - TEST PASSED.....");
+	else
+		printf("\n\n - TEST FAILED.....");
+
+printf("\n\n=================== ft_strmapi check =======================\n");
+*/
+
+
+
 
 	return (0);
 }
+
+
+
+
+/**
+char	ft_testfun_strmapi(unsigned int nb, char c)
+{
+	c = c + nb; 
+	return (c);
+}
+**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
