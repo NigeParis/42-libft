@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/20 09:57:52 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/20 14:47:11 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 
 char	ft_testfun_strmapi(unsigned int nb, char c);
-
+void	ft_test_striteri(unsigned int nb, char *ptr);
 
 
 int	main(void)
@@ -638,21 +638,33 @@ while (*str)
 printf("\n======================= ft_tolower check ========================\n");
 */
 /*
-
 printf("\n======================= ft_strchr check ========================\n");
 
 char	str[] = "abciwdefghijklmnopqrstuvwxyz";
 int		c;
-char	*result;
+char	*Vresult = NULL;
+char	*Fresult = NULL;
 
-c = 'w';
+c = 'z';
 
-result = ft_strchr(str, c);
+printf("\nstring : %s", str);
+printf("\nfind   : %c\n", c);
 
-printf("\nfound     : %c", *result);
-result++;
-printf("\nnext char : %c", *result);
+printf("\n================================================\n");
+Vresult = strchr(str, c);
+printf("\nREAL  FUN : found: %c - ", *Vresult);
+Vresult++;
+printf("next char in the str: %c", *Vresult);
 
+Fresult = ft_strchr(str, c);
+printf("\nFALSE FUN  found: %c - ", *Fresult);
+Fresult++;
+printf("next char in the str: %c\n\n", *Fresult);
+
+if ((!ft_memcmp(Vresult, Fresult, 1)) && (!ft_memcmp(Vresult + 1, Fresult + 1, 1)))
+	printf("\nPASSED TEST \n");
+else
+	printf("\nFAILED TEST \n");
 
 
 printf("\n======================= ft_strchr check ========================\n");
@@ -1103,8 +1115,8 @@ printf("\n======================== ft_strtrim check =========================\n"
 /*
 printf("\n======================== ft_split check =========================\n");
 
-//	char	str[] = "lorem.ip.sum.do.l";
-	char	str[] = "";
+	char	str[] = "lorem.ip.sum.do.l";
+//	char	str[] = "";
 	size_t i = 0;
 	char	**result = NULL;
 
@@ -1119,11 +1131,11 @@ printf("\n======================== ft_split check =========================\n");
             i++;
         }
 	}
-	while (i >= 0)
-	{
-		free(result[i]);
-		i--;
-	}
+//	while (i + 1 > 0)
+//	{
+//		free(result[i]);
+//		i--;
+//	}
 	free(result);
 printf("\n======================== ft_split check =========================\n");
 */
@@ -1208,6 +1220,19 @@ printf("\n\n================== ft_strmapi check =======================\n");
 
 printf("\n\n=================== ft_strmapi check =======================\n");
 */
+/*
+printf("\n\n=================== ft_striteri check =======================\n");
+
+	char	str[] = "BbEdGfIhKjMlOnQbS";
+
+	printf("\n starting string...: %s", str);
+
+	
+	ft_striteri(str, &ft_test_striteri);
+	printf("\n string............: %s", str);
+
+printf("\n\n=================== ft_striteri check =======================\n");
+*/
 
 
 
@@ -1226,8 +1251,13 @@ char	ft_testfun_strmapi(unsigned int nb, char c)
 }
 **/
 
-
-
+/**
+void	ft_test_striteri(unsigned int nb, char *ptr)
+{
+	if (*ptr % 2 == 0)
+		*ptr = *ptr + nb;
+}
+**/
 
 
 

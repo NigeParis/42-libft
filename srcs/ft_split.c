@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:55:07 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/18 07:33:35 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/20 14:45:07 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -29,8 +29,28 @@
 
 #include "libft.h"
 
-static size_t	ft_nb_words(char const *str, char divider);
-static size_t	ft_nb_chars(const char *s, char split);
+static size_t	ft_nb_words(char const *str, char sep);
+static size_t	ft_nb_chars(const char *s, char sep);
+
+static char	*alloc_free(char **str, size_t nb, size_t next)
+{
+	char		**word;
+	size_t		i;
+
+	i = 0;
+	word = str;
+	word[next] = ft_calloc((nb + 1), sizeof(char));
+	if (!word[next])
+	{
+		while (i < next + 1)
+		{
+			free(word[i]);
+			i++;
+		}
+		return (NULL);
+	}
+	return (word[next]);
+}
 
 char	**ft_split(char const *s, char c)
 {
@@ -49,7 +69,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if ((ft_nb_chars(&s[i], c)) > 0)
 		{
-			str[next] = ft_calloc(((ft_nb_chars(&s[i], c)) + 1), sizeof(char));
+			str[next] = alloc_free(str, ((ft_nb_chars(&s[i], c)) + 1), next);
 			if (!str)
 				return (NULL);
 			ft_memcpy(str[next], &s[i], (ft_nb_chars(&s[i], c)));
@@ -61,7 +81,7 @@ char	**ft_split(char const *s, char c)
 	return (str);
 }
 
-static size_t	ft_nb_words(char const *str, char split)
+static size_t	ft_nb_words(char const *str, char sep)
 {
 	size_t	i;
 	size_t	count;
@@ -70,19 +90,19 @@ static size_t	ft_nb_words(char const *str, char split)
 	count = 0;
 	while (str[i] != '\0')
 	{
-		if ((str[i] != split) && ((str[i + 1] == split) || str[i + 1] == '\0'))
+		if ((str[i] != sep) && ((str[i + 1] == sep) || str[i + 1] == '\0'))
 			count++;
 		i++;
 	}
 	return (count);
 }
 
-static size_t	ft_nb_chars( const char *s, char split)
+static size_t	ft_nb_chars( const char *s, char sep)
 {
 	size_t	i;
 
 	i = 0;
-	while (s[i] && s[i] != split)
+	while (s[i] && s[i] != sep)
 		i++;
 	return (i);
 }

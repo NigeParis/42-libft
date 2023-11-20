@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 16:06:24 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/19 22:36:01 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/20 12:25:53 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -26,13 +26,20 @@
 *
 * External functs : none
 **/
-/*
+
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
+	unsigned int	index;
+	char			*ptr;
 
-
-
-
-}*/
+	index = 0;
+	ptr = (char *)s;
+	while (ptr[index])
+	{
+		f(index, &ptr[index]);
+		index++;
+	}	
+	ptr[index + 1] = '\0';
+}
