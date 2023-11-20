@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/20 14:47:11 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/20 18:48:35 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -645,7 +645,7 @@ int		c;
 char	*Vresult = NULL;
 char	*Fresult = NULL;
 
-c = 'z';
+c = ('t' + 256);
 
 printf("\nstring : %s", str);
 printf("\nfind   : %c\n", c);
@@ -676,10 +676,10 @@ char	str[] = "bonjour     :   @     @x";
 int		c;
 char	*result;
 
-c = '\0';
+c = '@';
 result = ft_strrchr(str, c);
 printf("\nfound.................. : %c", *result);
-abcdefghresult++;
+result++;
 printf("\nnext char in the string : %c", *result);
 
 printf("\n======================= ft_strrchr check ========================\n");
@@ -849,46 +849,46 @@ printf ("\nfaux s1 = s2 = 0  '', '',                    n = 0 - result : %d", re
 
 printf("\n\n====================== ft_memcmp check ========================\n");
 */
-/*
+
 printf("\n\n====================== ft_strnstr check ========================\n");
 
-char	big[] = "this is bithe big str";
-char	little[] = "";
-char	*Vresult;
+char	big[] = "aaabcabcd";
+char	little[] = "aabc";
+//char	*Vresult;
 char	*Fresult;
 
-Vresult = strnstr(big, little, 10);
-Fresult = ft_strnstr(big, little, 10);
-printf("\nVrai : 'this is bithe big str', '',  - len = 10 -> %s", Vresult);
+//Vresult = strnstr(big, little, 10);
+Fresult = ft_strnstr(big + 1, little, -1);
+//printf("\nVrai : 'this is bithe big str', '',  - len = 10 -> %s", Vresult);
 printf("\nFaux : 'this is bithe big str', '',  - len = 10 -> %s\n", Fresult);
-
-Vresult = strnstr(big, "big", 10);
+/*
+//Vresult = strnstr(big, "big", 10);
 Fresult = ft_strnstr(big, "big", 10);
-printf("\nVrai : 'this is bithe big str', 'big',  - len = 10 -> %s", Vresult);
+//printf("\nVrai : 'this is bithe big str', 'big',  - len = 10 -> %s", Vresult);
 printf("\nFaux : 'this is bithe big str', 'big',  - len = 10 -> %s\n", Fresult);
 
-Vresult = strnstr("", "", 10);
+//Vresult = strnstr("", "", 10);
 Fresult = ft_strnstr("", "", 10);
-printf("\nVrai : '', '',  - len = 10 -> %s", Vresult);
+//printf("\nVrai : '', '',  - len = 10 -> %s", Vresult);
 printf("\nFaux : '', '',  - len = 10 -> %s\n", Fresult);
 
-Vresult = strnstr("a", "a", 1);
+//Vresult = strnstr("a", "a", 1);
 Fresult = ft_strnstr("a", "a", 1);
-printf("\nVrai : 'a', 'a',  - len = 1 -> %s", Vresult);
+//printf("\nVrai : 'a', 'a',  - len = 1 -> %s", Vresult);
 printf("\nFaux : 'a', 'a',  - len = 1 -> %s\n", Fresult);
 
-Vresult = strnstr("", "a", 1);
+//Vresult = strnstr("", "a", 1);
 Fresult = ft_strnstr("", "a", 1);
-printf("\nVrai : '', 'a',  - len = 1 -> %s", Vresult);
+//printf("\nVrai : '', 'a',  - len = 1 -> %s", Vresult);
 printf("\nFaux : '', 'a',  - len = 1 -> %s\n", Fresult);
 
-Vresult = strnstr("sma s sm smal smalll ex samall tec", "small", 200);
+//Vresult = strnstr("sma s sm smal smalll ex samall tec", "small", 200);
 Fresult = ft_strnstr("sma s sm smal smalll ex samall tec", "small", 200);
-printf("\nVrai : 'sma s sm smal smalll ex samall tec', 'small',  - len = 1 -> %s", Vresult);
+//printf("\nVrai : 'sma s sm smal smalll ex samall tec', 'small',  - len = 1 -> %s", Vresult);
 printf("\nFaux : 'sma s sm smal smalll ex samall tec', 'small',  - len = 1 -> %s\n", Fresult);
-
-printf("\n\n====================== ft_strnstr check ========================\n");
 */
+printf("\n\n====================== ft_strnstr check ========================\n");
+
 /*
 printf("\n\n====================== ft_atoi check ===========================\n");
 
@@ -1234,9 +1234,20 @@ printf("\n\n=================== ft_striteri check =======================\n");
 printf("\n\n=================== ft_striteri check =======================\n");
 */
 
+/*
+printf("\n\n=================== ft_lstnew check =======================\n");
+
+char	content[] = "String";
+
+t_list *ptr;	
+
+ptr = ft_lstnew((char *)content);
 
 
 
+
+printf("\n\n=================== ft_lstnew check =======================\n");
+*/
 	return (0);
 }
 

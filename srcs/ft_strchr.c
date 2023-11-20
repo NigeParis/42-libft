@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 22:07:24 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/13 22:09:29 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/20 17:16:12 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -31,12 +31,14 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*str;
-	int		i;
+	char			*str;
+	unsigned char	find;
+	int				i;
 
+	find = (unsigned char)c;
 	str = (char *)s;
 	i = 0;
-	if (c == '\0')
+	if (find == '\0')
 	{
 		while (*str)
 			str++;
@@ -44,7 +46,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	while (str[i])
 	{
-		if (c == str[i])
+		if (find == str[i])
 			return (&str[i]);
 		i++;
 	}
