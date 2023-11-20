@@ -62,7 +62,7 @@ tester - G = Libftest
 | X |   | [`ft_split`](/srcs/ft_split.c)  | char \*\*ft\_split(char const \*s, char c) |
 | X |   | [`ft_itoa`](/srcs/ft_itoa.c)  | char \*ft\_itoa(int n); |
 | X |   | [`ft_strmapi`](/srcs/ft_strmapi.c)  | char \*ft\_strmapi(char const \*s, char (\*f)(unsigned int, char)) |
-|   |   | [`ft_striteri`](/srcs/ft\_striteri.c)  | void ft\_striteri(char \*s, void (\*f)(unsigned int, char\*));
+| X |   | [`ft_striteri`](/srcs/ft\_striteri.c)  | void ft\_striteri(char \*s, void (\*f)(unsigned int, char\*));
 
 
 ### Linked Lists
