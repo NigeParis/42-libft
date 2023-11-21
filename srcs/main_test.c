@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/21 12:58:34 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:05:38 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -851,7 +851,7 @@ printf ("\nfaux s1 = s2 = 0  '', '',                    n = 0 - result : %d", re
 
 printf("\n\n====================== ft_memcmp check ========================\n");
 */
-
+/*
 printf("\n\n====================== ft_strnstr check ========================\n");
 
 //char	big[] = "aaabcabcd";
@@ -867,7 +867,7 @@ Fresult = ft_strnstr(big, little, 0);
 //printf("\nVrai : 'this is bithe big str', '',  - len = 10 -> %s", Vresult);
 printf("\nFaux : 'this is bithe big str', '',  - len = 10 -> %s\n", Fresult);
 	
-/*
+
 //Vresult = strnstr(big, "big", 10);
 Fresult = ft_strnstr(big, "big", 10);
 //printf("\nVrai : 'this is bithe big str', 'big',  - len = 10 -> %s", Vresult);
@@ -1033,16 +1033,17 @@ printf("\n======================== ft_memccpy check =========================\n"
 
 printf("\n======================== ft_memccpy check =========================\n");
 */
-/*
+
 printf("\n======================== ft_substr check =========================\n");
 
-	char	str[] = "This-is-the-string-to-get-substring";
+	char	str[] = "BONJOUR LES HARICOTS !";
 	char	*ptr_to_substr;
 
 	ptr_to_substr = NULL;
-	ptr_to_substr = ft_substr(str, 8, 3);
-	printf("\nstring : '%s'",str);
-	printf("\nResult : '%s' - start 8, len 3\n", ptr_to_substr);
+	ptr_to_substr = ft_substr(str, 8, 14);
+	ft_putstr(ptr_to_substr);
+	printf("\nResult : '%s' - start 1, len 1\n", ptr_to_substr);
+	printf("\n %zu", ft_strlen(str) + 1);
 	free(ptr_to_substr);
 
 	ptr_to_substr = NULL;
@@ -1077,7 +1078,7 @@ printf("\n======================== ft_substr check =========================\n")
 	free(ptr_to_substr);
 
 printf("\n======================== ft_substr check =========================\n");
-*/
+
 /*
 printf("\n======================== ft_strjoin check =========================\n");
 

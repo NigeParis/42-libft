@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:36:46 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/21 14:39:26 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/21 15:16:01 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -40,9 +40,11 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*ptr;
 	size_t	tmp;
 
-	tmp = count * size;
-	if (count >= SIZE_MAX || size >= SIZE_MAX)
+	if (size == 0)
+		return (malloc(0));
+	if (count > (2147483647 / size))
 		return (0);
+	tmp = count * size;
 	ptr = malloc(tmp);
 	if (!ptr)
 		return (0);
