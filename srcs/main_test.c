@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/20 23:32:07 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/21 07:10:15 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -849,7 +849,7 @@ printf ("\nfaux s1 = s2 = 0  '', '',                    n = 0 - result : %d", re
 
 printf("\n\n====================== ft_memcmp check ========================\n");
 */
-/*
+
 printf("\n\n====================== ft_strnstr check ========================\n");
 
 //char	big[] = "aaabcabcd";
@@ -891,7 +891,7 @@ Fresult = ft_strnstr("sma s sm smal smalll ex samall tec", "small", 200);
 printf("\nFaux : 'sma s sm smal smalll ex samall tec', 'small',  - len = 1 -> %s\n", Fresult);
 
 printf("\n\n====================== ft_strnstr check ========================\n");
-*/
+
 /*
 printf("\n\n====================== ft_atoi check ===========================\n");
 
@@ -1005,7 +1005,7 @@ free(Fptr);
 
 printf("\n======================== ft_strdup check =========================\n");
 */
-
+/*
 printf("\n======================== ft_memccpy check =========================\n");
 
 	char	src[] = "zyxwvutsrqponmlkjihgfedcba";
@@ -1029,7 +1029,7 @@ printf("\n======================== ft_memccpy check =========================\n"
 	printf("\nFaux ptr  : '%s'", Fptr);
 
 printf("\n======================== ft_memccpy check =========================\n");
-
+*/
 /*
 printf("\n======================== ft_substr check =========================\n");
 
