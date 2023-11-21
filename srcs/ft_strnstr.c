@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:25:12 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/21 07:45:08 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/21 14:58:34 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -32,28 +32,22 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char		*str;
-	char		*find;
-	size_t		i;
-	size_t		j;
+	size_t	i;
+	size_t	size;
 
-	
-	str = (char *)big;
-	find = (char *)little;
-	if (len > ft_strlen(big))
-		len = ft_strlen(big) + 1;
 	i = 0;
-	j = 0;
-	if (!*find)
-		return (&str[i]);
-	while (i < len)
+	if (little[0] == '\0')
+		return ((char *)big);
+	size = ft_strlen(little);
+	if (len == 1 && ft_strncmp(big, little, size) == 0)
+		return ((char *)big);
+	while (big[i] != '\0' && i + 1 < len)
 	{
-		if (find[j] == str[i])
+		if (ft_strncmp(big + i, little, size) == 0)
 		{
-			while ((find[j++] == str[i++]) && i <= len)
-				if (find[j] == '\0')
-					return (&str[i] - j);
-			j = 0;
+			if (little[i] == 0)
+				return (NULL);
+			return ((char *)big + i);
 		}
 		i++;
 	}

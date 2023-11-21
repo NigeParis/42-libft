@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/21 07:10:15 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/21 12:58:34 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -699,8 +699,8 @@ char	str9[] = "test";
 char	str10[] = "";
 char	str11[] = "abcdefgh";
 char	str12[] = "abcdwxyz";
-char	str13[] = "test\200";
-char	str14[] = "test\0";
+//char	str13[] = "test\200";
+//char	str14[] = "test\0";
 int		result;
 
 printf("\nstr1 :%s", str1);
@@ -756,13 +756,15 @@ printf("\nF_Result string 'abcdwxyz' : n = 4: %d", result);
 printf("\n");
 
 result = 0;
-result = strncmp(str13, str14, 6);
+	}
+result = strncmp("cd","cd", 2);
 printf("\nV_Result string 'test\\200' : n = 6: %d", result);
-result = ft_strncmp(str13, str14, 6);
+result = ft_strncmp("cd", "cd", 2);
 printf("\nF_Result string 'test\\0' : n = 6: %d", result);
 printf("\n");
 
 printf("\n====================== ft_strncmp check ========================\n");
+	}
 */
 /*
 printf("\n====================== ft_memchr check ========================\n");
@@ -864,7 +866,8 @@ char	*Fresult;
 Fresult = ft_strnstr(big, little, 0);
 //printf("\nVrai : 'this is bithe big str', '',  - len = 10 -> %s", Vresult);
 printf("\nFaux : 'this is bithe big str', '',  - len = 10 -> %s\n", Fresult);
-
+	
+/*
 //Vresult = strnstr(big, "big", 10);
 Fresult = ft_strnstr(big, "big", 10);
 //printf("\nVrai : 'this is bithe big str', 'big',  - len = 10 -> %s", Vresult);
@@ -891,7 +894,7 @@ Fresult = ft_strnstr("sma s sm smal smalll ex samall tec", "small", 200);
 printf("\nFaux : 'sma s sm smal smalll ex samall tec', 'small',  - len = 1 -> %s\n", Fresult);
 
 printf("\n\n====================== ft_strnstr check ========================\n");
-
+*/
 /*
 printf("\n\n====================== ft_atoi check ===========================\n");
 
