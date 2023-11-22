@@ -17,9 +17,9 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 
 ### Libc
 
-tester - G = Libftest 
-tester - U = libft-unit-test 
-tester - T = tripouille 
+tester - G = Libftest <br>
+tester - U = libft-unit-test <br>
+tester - T = tripouille <br>
 
 | G | U | T |  Functions      | Prototypes             |  |
 |---|---|---|-------------|---|------------------------|
