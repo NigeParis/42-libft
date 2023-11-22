@@ -17,9 +17,9 @@ dynamic memory allocation and Makefiles to make my own library libft.h
 
 ### Libc
 
-tester - G = Libftest
-tester - U = libft-unit-test
-tester - T = tripouille
+tester - G = Libftest 
+tester - U = libft-unit-test 
+tester - T = tripouille 
 
 | G | U | T |  Functions      | Prototypes             |  |
 |---|---|---|-------------|---|------------------------|
@@ -50,8 +50,8 @@ tester - T = tripouille
 
 ### Extension
 
-| G | U | T | Functions    | Prototypes             |  |
-|---|---|-------------|---|------------------------|
+| G | U | T | Functions   | Prototypes             |  |
+|---|---|---|---------|---|------------------------|
 | X |   | X | [`ft_putchar`](/srcs/ft_putchar.c)  |void	ft\_putchar(char c) |
 | X | X | X | [`ft_putchar_fd`](/srcs/ft_putchar_fd.c)  |void	ft\_putchar\_fd(char c, int fd) |
 | X | X | X | [`ft_putstr`](/srcs/ft_putstr.c)  |void	ft\_putstr(char \*str)
@@ -70,7 +70,7 @@ tester - T = tripouille
 ### Linked Lists
 
 |   |   |  | Functions  |
-|---|---|-------------|
+|---|---|--|-----------|
 |   |   |  | [`ft_lstnew`]()  |
 |   |   |  | [`ft_lstadd_front`]()  |
 |   |   |  | [`ft_lstsize`]()  |
