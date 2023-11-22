@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 22:24:00 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/22 12:28:19 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/22 18:07:48 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -36,6 +36,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	index;
 	size_t	len;
 	char	*ptr;
+
 	if (!s || !f)
 		return (NULL);
 	index = 0;

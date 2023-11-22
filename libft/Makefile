@@ -16,8 +16,8 @@ SRC_OBJ=$(addprefix $(OBJ_DIR), $(OBJ))
 ###############################################################################
 ## SOURCES 
 
-SRC_DIR=/home/nrobinso/Documents/libft/srcs/
-OBJ_DIR=/home/nrobinso/Documents/libft/srcs/objs/
+SRC_DIR=/home/nrobinso/Documents/42-curus/libft/
+OBJ_DIR=/home/nrobinso/Documents/42-curus/libft/
 INCLUDE=
 SRC=ft_putchar.c ft_putstr.c ft_putchar_fd.c
 SRC+=ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
@@ -36,7 +36,7 @@ MAIN=main_test
 
 all: $(NAME)
 	@echo "\nDone ! .......\n"
-	@mv $(OBJ) $(OBJ_DIR)
+#	@mv $(OBJ) $(OBJ_DIR)
 
 $(NAME): $(OBJ)
 	@echo "\nCreating Libft.a FILE .......\n"
@@ -47,6 +47,9 @@ $(OBJ):
 	@echo "\nCOMPILE all c files to .o FILES .......\n"
 	$(CC) $(CFLAGS) $(CCOPTIONS) $(SRCS) -I $(HEAD)
 	$(CC) $(CFLAGS) $(CCOPTIONS) $(MAIN_SRC).c -I$(HEAD) -o $(MAIN_OBJ).o
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 clean:
 	rm -f $(SRC_OBJ) $(MAIN_OBJ).o *.o

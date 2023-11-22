@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 16:06:24 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/20 12:25:53 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/22 18:15:01 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -35,11 +35,14 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	char			*ptr;
 
 	index = 0;
+	if (!s || !f)
+		return ;
 	ptr = (char *)s;
-	while (ptr[index])
+	while (*s)
 	{
 		f(index, &ptr[index]);
 		index++;
+		s++;
 	}	
-	ptr[index + 1] = '\0';
+	ptr[index] = '\0';
 }

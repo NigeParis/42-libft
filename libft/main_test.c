@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/22 16:00:07 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/22 18:13:39 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -851,7 +851,7 @@ printf ("\nfaux s1 = s2 = 0  '', '',                    n = 0 - result : %d", re
 
 printf("\n\n====================== ft_memcmp check ========================\n");
 */
-
+/*
 printf("\n\n====================== ft_strnstr check ========================\n");
 
 char	big[] = "MZIRIBMZIRIBMZE123";
@@ -866,7 +866,7 @@ char	*Fresult;
 Fresult = ft_strnstr(big, little, 9);
 //printf("\nVrai : 'this is bithe big str', '',  - len = 10 -> %s", Vresult);
 printf("\nFaux : 'this is bithe big str', '',  - len = 10 -> %s\n", Fresult);
-	
+*/	
 /*
 //Vresult = strnstr(big, "big", 10);
 Fresult = ft_strnstr(big, "big", 10);
@@ -892,9 +892,9 @@ printf("\nFaux : '', 'a',  - len = 1 -> %s\n", Fresult);
 Fresult = ft_strnstr("sma s sm smal smalll ex samall tec", "small", 200);
 //printf("\nVrai : 'sma s sm smal smalll ex samall tec', 'small',  - len = 1 -> %s", Vresult);
 printf("\nFaux : 'sma s sm smal smalll ex samall tec', 'small',  - len = 1 -> %s\n", Fresult);
-*/
+*//*
 printf("\n\n====================== ft_strnstr check ========================\n");
-
+*/
 /*
 printf("\n\n====================== ft_atoi check ===========================\n");
 
@@ -1236,7 +1236,7 @@ printf("\n\n================== ft_strmapi check =======================\n");
 
 printf("\n\n=================== ft_strmapi check =======================\n");
 */
-/*
+
 printf("\n\n=================== ft_striteri check =======================\n");
 
 	char	str[] = "BbEdGfIhKjMlOnQbS";
@@ -1248,7 +1248,7 @@ printf("\n\n=================== ft_striteri check =======================\n");
 	printf("\n string............: %s", str);
 
 printf("\n\n=================== ft_striteri check =======================\n");
-*/
+
 
 /*
 printf("\n\n=================== ft_lstnew check =======================\n");
@@ -1292,13 +1292,13 @@ char	ft_testfun_strmapi(unsigned int nb, char c)
 }
 **/
 
-/**
+
 void	ft_test_striteri(unsigned int nb, char *ptr)
 {
 	if (*ptr % 2 == 0)
 		*ptr = *ptr + nb;
 }
-**/
+
 
 
 
