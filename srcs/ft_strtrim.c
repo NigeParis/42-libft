@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 09:37:29 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/21 21:06:04 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/22 10:10:00 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -52,19 +52,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	start = 0;
 	stop = ft_strlen(s1);
-	newstr = (char *)ft_calloc((ft_strlen(s1) + 1), sizeof(char));
-	if (!newstr)
-		return (NULL);
 	while (ft_isfound(s1[start], set))
 		start++;
 	while (ft_isfound(s1[stop - j - 1], set))
 		j++;
+	if (((j + i) == stop) || (stop == 0))
+		return (ft_strdup(""));
+	newstr = (char *)ft_calloc(((stop + 1) - (start + j)), sizeof(char));
+	if (!newstr)
+		return (NULL);
 	while (start < stop - j)
-	{
-		newstr[i] = s1[start];
-		i++;
-		start++;
-	}
+		newstr[i++] = s1[start++];
 	newstr[i] = '\0';
 	return (newstr);
 }

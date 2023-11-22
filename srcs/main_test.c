@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/21 21:02:40 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/22 09:44:44 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1035,21 +1035,28 @@ printf("\n======================== ft_memccpy check =========================\n"
 */
 /*
 printf("\n======================== ft_substr check =========================\n");
-
+*/
+/**
+* Note : les exceptions
+*      (start > len || len == 0 || start > strsize) => "";
+*      (len > strsize) => len == strsize
+*      (strsize < (len + start) => (len == (strsize - start)
+**/
+/*
 	char	str[] = "BONJOUR LES HARICOTS !";
 	char	*ptr_to_substr;
 
+	printf("\nstring : '%s'",str);
 	ptr_to_substr = NULL;
-	ptr_to_substr = ft_substr(str, 8, 14);
-	ft_putstr(ptr_to_substr);
-	printf("\nResult : '%s' - start 1, len 1\n", ptr_to_substr);
+	ptr_to_substr = ft_substr(str, 10, 14);
+	printf("\nResult : '%s' - start 1, len %zu\n", ptr_to_substr, ft_strlen(ptr_to_substr));
 	printf("\n %zu", ft_strlen(str) + 1);
 	free(ptr_to_substr);
 
 	ptr_to_substr = NULL;
 	ptr_to_substr = ft_substr(str, 1, 1);
 	printf("\nstring : '%s'",str);
-	printf("\nResult : '%s' - start 1, len 1\n", ptr_to_substr);
+	printf("\nResult : '%s' - start 1, len : %zu\n", ptr_to_substr, ft_strlen(ptr_to_substr));
 	free(ptr_to_substr);
 
 	ptr_to_substr = NULL;
@@ -1109,9 +1116,10 @@ printf("\n======================== ft_strtrim check =======================\n");
 
 	result = NULL;
 //	result = ft_strtrim("hekllo-sentencx", "hello");
-	result = ft_strtrim("   xxxtripouille", " x");
+	result = ft_strtrim("abcdba", "acb");
 
-	printf("\nresult : '%s'", result);
+	printf("\nresult: '%s' len result : %zu", result, ft_strlen(result));
+	ft_putstr(result);
 	free(result);
 
 
@@ -1120,7 +1128,7 @@ printf("\n======================== ft_strtrim check =======================\n");
 printf("\n======================== ft_strtrim check ======================\n");
 
 /*
-printf("\n======================== ft_split check =========================\n");
+printf("\n======================= ft_split check =========================\n");
 
 	char	str[] = "lorem.ip.sum.do.l";
 //	char	str[] = "";

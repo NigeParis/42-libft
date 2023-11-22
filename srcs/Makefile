@@ -16,8 +16,8 @@ SRC_OBJ=$(addprefix $(OBJ_DIR), $(OBJ))
 ###############################################################################
 ## SOURCES 
 
-SRC_DIR=/Users/nige/Documents/libft/srcs/
-OBJ_DIR=/Users/nige/Documents/libft/srcs/objs/
+SRC_DIR=/home/nrobinso/Documents/libft/srcs/
+OBJ_DIR=/home/nrobinso/Documents/libft/srcs/objs/
 INCLUDE=
 SRC=ft_putchar.c ft_putstr.c ft_putchar_fd.c
 SRC+=ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
