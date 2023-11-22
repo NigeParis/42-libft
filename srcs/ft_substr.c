@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:34:43 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/22 09:28:18 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/22 15:37:23 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -40,6 +40,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = start;
+	if (!s)
+		return (NULL);
 	strsize = ft_strlen(s);
 	if ((start > len) || (len == 0) || (start > strsize))
 		return (ft_strdup(""));
@@ -51,11 +53,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!substr)
 		return (NULL);
 	while ((i < len) && (i < strsize))
-	{
-		substr[i] = s[j];
-		i++;
-		j++;
-	}
+		substr[i++] = s[j++];
 	substr[i] = '\0';
 	return (substr);
 }

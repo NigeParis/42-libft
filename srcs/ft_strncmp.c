@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:35:15 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/13 13:34:08 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/22 15:09:08 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -51,7 +51,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	str2 = (char *)s2;
 	if (((*str1 || *str2) == '\0') || n < 1)
 		return (0);
-	while ((str1[i] == str2[i]) && i < n)
+	while ((str1[i] == str2[i]) && i < n && str1[i] && str2[i])
 	{
 		i++;
 	}

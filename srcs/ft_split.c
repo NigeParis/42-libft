@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:55:07 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/22 10:25:55 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/22 13:10:54 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -31,26 +31,7 @@
 
 static size_t	ft_nb_words(char const *str, char sep);
 static size_t	ft_nb_chars(const char *s, char sep);
-
-static char	*alloc_free(char **str, size_t nb, size_t next)
-{
-	char		**word;
-	size_t		i;
-
-	i = 0;
-	word = str;
-	word[next] = ft_calloc((nb + 1), sizeof(char));
-	if (!word[next])
-	{
-		while (i < next + 1)
-		{
-			free(word[i]);
-			i++;
-		}
-		return (NULL);
-	}
-	return (word[next]);
-}
+static char	*alloc_free(char **str, size_t nb, size_t next);
 
 char	**ft_split(char const *s, char c)
 {
@@ -60,8 +41,9 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	next = 0;
-	str = (char **) ft_calloc((ft_nb_words(s, c) + 1), sizeof(char **));
-	if (!str)
+	if (!s)
+		return (NULL);
+	if(!(str = (char **) ft_calloc((ft_nb_words(s, c) + 1), sizeof(char **))))
 		return (NULL);
 	while (s[i] != '\0')
 	{
@@ -69,8 +51,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if ((ft_nb_chars(&s[i], c)) > 0)
 		{
-			str[next] = alloc_free(str, ((ft_nb_chars(&s[i], c))), next);
-			if (!str)
+			if (!(str[next] = alloc_free(str, ((ft_nb_chars(&s[i], c))), next)))
 				return (NULL);
 			ft_memcpy(str[next], &s[i], (ft_nb_chars(&s[i], c)));
 			i = i + (ft_nb_chars(&s[i], c));
@@ -105,4 +86,24 @@ static size_t	ft_nb_chars( const char *s, char sep)
 	while (s[i] && s[i] != sep)
 		i++;
 	return (i);
+}
+
+static char	*alloc_free(char **str, size_t nb, size_t next)
+{
+	char		**word;
+	size_t		i;
+
+	i = 0;
+	word = str;
+	word[next] = ft_calloc((nb + 1), sizeof(char));
+	if (!word[next])
+	{
+		while (i < next + 1)
+		{
+			free(word[i]);
+			i++;
+		}
+		return (NULL);
+	}
+	return (word[next]);
 }

@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 09:37:29 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/22 10:10:00 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/22 14:19:43 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -26,19 +26,7 @@
 
 #include "libft.h"
 
-static int	ft_isfound(char c, char const *set)
-{
-	int	i;
-
-	i = 0;
-	while (set[i] != '\0')
-	{
-		if (c == set[i])
-			return (1);
-		i++;
-	}
-	return (0);
-}
+static int	ft_isfound(char c, char const *set);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -48,6 +36,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	size_t	j;
 
+	if (!s1 || !set)
+		return (NULL);
 	j = 0;
 	i = 0;
 	start = 0;
@@ -65,4 +55,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 		newstr[i++] = s1[start++];
 	newstr[i] = '\0';
 	return (newstr);
+}
+
+static int	ft_isfound(char c, char const *set)
+{
+	int	i;
+
+	i = 0;
+	while (set[i] != '\0')
+	{
+		if (c == set[i])
+			return (1);
+		i++;
+	}
+	return (0);
 }

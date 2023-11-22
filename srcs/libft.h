@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:33:30 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/21 14:15:19 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/22 16:38:04 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-
-
 int		ft_isspace(int c);
 int		ft_islower(int c);
 int		ft_isupper(int c);
@@ -37,7 +35,7 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
-void	ft_putchar(char c);
+int		ft_putchar(int c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putstr(char *str);

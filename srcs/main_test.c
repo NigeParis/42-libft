@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/22 10:58:26 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/22 16:00:07 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -851,23 +851,23 @@ printf ("\nfaux s1 = s2 = 0  '', '',                    n = 0 - result : %d", re
 
 printf("\n\n====================== ft_memcmp check ========================\n");
 */
-/*
+
 printf("\n\n====================== ft_strnstr check ========================\n");
 
-//char	big[] = "aaabcabcd";
-char	little[] = "aabc";
-char	*big = "'\0'";
+char	big[] = "MZIRIBMZIRIBMZE123";
+char	little[] = "MZIRIBMZE";
+//char	*big = "'\0'";
 //char	*little = NULL;
 //char	*Vresult;
 //char	*Vresult;
 char	*Fresult;
 
 //Vresult = strnstr(big, little, 10);
-Fresult = ft_strnstr(big, little, 0);
+Fresult = ft_strnstr(big, little, 9);
 //printf("\nVrai : 'this is bithe big str', '',  - len = 10 -> %s", Vresult);
 printf("\nFaux : 'this is bithe big str', '',  - len = 10 -> %s\n", Fresult);
 	
-
+/*
 //Vresult = strnstr(big, "big", 10);
 Fresult = ft_strnstr(big, "big", 10);
 //printf("\nVrai : 'this is bithe big str', 'big',  - len = 10 -> %s", Vresult);
@@ -892,9 +892,9 @@ printf("\nFaux : '', 'a',  - len = 1 -> %s\n", Fresult);
 Fresult = ft_strnstr("sma s sm smal smalll ex samall tec", "small", 200);
 //printf("\nVrai : 'sma s sm smal smalll ex samall tec', 'small',  - len = 1 -> %s", Vresult);
 printf("\nFaux : 'sma s sm smal smalll ex samall tec', 'small',  - len = 1 -> %s\n", Fresult);
-
-printf("\n\n====================== ft_strnstr check ========================\n");
 */
+printf("\n\n====================== ft_strnstr check ========================\n");
+
 /*
 printf("\n\n====================== ft_atoi check ===========================\n");
 
@@ -958,7 +958,7 @@ printf("\nFaux : '\n\f\v\r\t     -   1' : %d\n", Fresult);
 
 printf("\n======================== ft_atoi check ===========================\n");
 */
-
+/*
 printf("======================== ft_calloc check =========================\n");
 
 char	*ptr = NULL;
@@ -972,7 +972,7 @@ printf("'%s'\n", ptr);
 free(ptr);
 
 printf("======================== ft_calloc check =========================\n");
-
+*/
 /*
 printf("\n======================== ft_strdup check =========================\n");
 
@@ -1264,6 +1264,20 @@ ptr = ft_lstnew((char *)content);
 
 printf("\n\n=================== ft_lstnew check =======================\n");
 */
+
+/*
+printf("\n\n=================== ft_putchar check =======================\n");
+
+	ft_putchar('Y');
+
+
+
+
+
+
+printf("\n\n=================== ft_putchar check =======================\n");
+*/
+
 	return (0);
 }
 
