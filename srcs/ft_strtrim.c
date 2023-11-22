@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 09:37:29 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/16 13:51:55 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/21 21:06:04 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -53,6 +53,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	stop = ft_strlen(s1);
 	newstr = (char *)ft_calloc((ft_strlen(s1) + 1), sizeof(char));
+	if (!newstr)
+		return (NULL);
 	while (ft_isfound(s1[start], set))
 		start++;
 	while (ft_isfound(s1[stop - j - 1], set))

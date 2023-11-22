@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/21 18:05:38 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/21 21:02:40 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1033,7 +1033,7 @@ printf("\n======================== ft_memccpy check =========================\n"
 
 printf("\n======================== ft_memccpy check =========================\n");
 */
-
+/*
 printf("\n======================== ft_substr check =========================\n");
 
 	char	str[] = "BONJOUR LES HARICOTS !";
@@ -1078,7 +1078,7 @@ printf("\n======================== ft_substr check =========================\n")
 	free(ptr_to_substr);
 
 printf("\n======================== ft_substr check =========================\n");
-
+*/
 /*
 printf("\n======================== ft_strjoin check =========================\n");
 
@@ -1100,16 +1100,16 @@ result = ft_strjoin("", "z");
 printf("\nresult : '%s'", result);
 free(result);
 
-printf("\n======================== ft_strjoin check =========================\n");
+printf("\n======================== ft_strjoin check =======================\n");
 */
-/*
-printf("\n======================== ft_strtrim check =========================\n");
+
+printf("\n======================== ft_strtrim check =======================\n");
 
 	char	*result;
 
 	result = NULL;
 //	result = ft_strtrim("hekllo-sentencx", "hello");
-	result = ft_strtrim("0123456789.x.z.", "x.z");
+	result = ft_strtrim("   xxxtripouille", " x");
 
 	printf("\nresult : '%s'", result);
 	free(result);
@@ -1117,8 +1117,8 @@ printf("\n======================== ft_strtrim check =========================\n"
 
 
 
-printf("\n======================== ft_strtrim check =========================\n");
-*/
+printf("\n======================== ft_strtrim check ======================\n");
+
 /*
 printf("\n======================== ft_split check =========================\n");
 
