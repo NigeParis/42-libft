@@ -4,7 +4,7 @@
 ## Results
 
  | Time | Completion |
- | --- | ----|
+ | ------- | --------|
  | 70h | in progress |
  
 ### ⚠️  Please don't copy, learn. ⚠️
