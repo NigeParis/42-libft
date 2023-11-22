@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/22 09:44:44 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/22 10:20:35 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1109,8 +1109,12 @@ free(result);
 
 printf("\n======================== ft_strjoin check =======================\n");
 */
-
+/*
 printf("\n======================== ft_strtrim check =======================\n");
+//Note : if isfound == strsize then return empty ""
+//		 if strsize 0 then return empty string
+
+
 
 	char	*result;
 
@@ -1122,22 +1126,21 @@ printf("\n======================== ft_strtrim check =======================\n");
 	ft_putstr(result);
 	free(result);
 
-
-
-
 printf("\n======================== ft_strtrim check ======================\n");
+*/
 
-/*
 printf("\n======================= ft_split check =========================\n");
 
-	char	str[] = "lorem.ip.sum.do.l";
+
+
+	char	str[] = "  tripouille  42 " ;
 //	char	str[] = "";
 	size_t i = 0;
 	char	**result = NULL;
 
 	printf("\nString begin       : '%s'", str);
 
-	result = ft_split(str, '.'); 
+	result = ft_split(str, ' '); 
   if (result != NULL) 
 	{
         while (result[i] != NULL && i < 20) 
@@ -1146,14 +1149,11 @@ printf("\n======================= ft_split check =========================\n");
             i++;
         }
 	}
-//	while (i + 1 > 0)
-//	{
-//		free(result[i]);
-//		i--;
-//	}
 	free(result);
+
+
 printf("\n======================== ft_split check =========================\n");
-*/
+
 /*
 printf("\n======================== ft_itoa check =========================\n");
 

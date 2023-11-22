@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:34:39 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/20 23:28:01 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/22 10:34:01 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -36,6 +36,6 @@ char	*ft_strdup(const char *s1)
 	str = (char *)ft_calloc(size + 1, sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	ft_strlcpy(str, to_copy, size + 1);	
+	ft_strlcpy(str, to_copy, size + 1);
 	return (str);
 }

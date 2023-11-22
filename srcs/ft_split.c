@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:55:07 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/20 14:45:07 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/22 10:25:55 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -69,7 +69,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if ((ft_nb_chars(&s[i], c)) > 0)
 		{
-			str[next] = alloc_free(str, ((ft_nb_chars(&s[i], c)) + 1), next);
+			str[next] = alloc_free(str, ((ft_nb_chars(&s[i], c))), next);
 			if (!str)
 				return (NULL);
 			ft_memcpy(str[next], &s[i], (ft_nb_chars(&s[i], c)));
