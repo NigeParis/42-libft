@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:31:01 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/23 08:18:02 by nige42           ###   ########.fr       */
+/*   Updated: 2023/11/23 14:14:51 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -33,23 +33,15 @@
 **/
 
 #include "libft.h"
-/**
-t_list *ft_lstnew(void *content)
+
+t_list	*ft_lstnew(void *content)
 {
-	t_list *ptr;
+	t_list	*ptr;
 
-
-
-
+	ptr = ft_calloc(1, sizeof(t_list));
+	if (!ptr)
+		return (NULL);
+	ptr -> content = content;
+	ptr -> next = NULL;
+	return (ptr);
 }
-*/
-
-void ft_test(void)
-{
-
-	ft_putstr("helloword");
-
-}
-
-
-

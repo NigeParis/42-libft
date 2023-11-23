@@ -6,17 +6,20 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 15:53:22 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/23 09:28:23 by nige42           ###   ########.fr       */
+/*   Updated: 2023/11/23 13:51:55 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+
 int	ft_putchar(int c)
 {
-	char ch;	
+	unsigned char *ptr;
+	unsigned char ch;
 	
-	ch = (unsigned char)c;
-	write(1, &ch, 1);
-	return ((int)c);
+	ch =(unsigned char)c;
+	ptr = &ch;
+	write(1, ptr, 1);
+	return (c);
 }

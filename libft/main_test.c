@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:36:21 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/23 09:32:45 by nige42           ###   ########.fr       */
+/*   Updated: 2023/11/23 12:48:21 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1264,16 +1264,21 @@ ptr = ft_lstnew((char *)content);
 
 printf("\n\n=================== ft_lstnew check =======================\n");
 */
-
+/*
 printf("\n\n=================== ft_putchar check =======================\n");
 
 	int i = 0;
+
+	char haiku[] = "池";
+	unsigned int in;
 
 	while (i < 126)
 	{
 		putchar(i);
 		i++;
 	}
+	in = *(int *)(haiku - 3);
+	putchar(in);
 	i = 0;
 	printf("\n");
 	while (i < 126)
@@ -1281,10 +1286,11 @@ printf("\n\n=================== ft_putchar check =======================\n");
 		ft_putchar(i);
 		i++;
 	}
+	ft_putchar(in);
 
 
 printf("\n\n=================== ft_putchar check =======================\n");
-
+*/
 
 	return (0);
 }

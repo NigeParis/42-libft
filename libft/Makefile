@@ -3,7 +3,7 @@
 
 NAME=out
 EXEC=libft.a
-CFLAGS=-Wall -Wextra -Werror
+CFLAGS=-Wall -Wextra -Werror -fPIC
 SRCS=$(addprefix $(SRC_DIR), $(SRC))
 OBJ=$(SRC:.c=.o)
 HEAD=$(addprefix $(INCLUDE), $(HEADER))
@@ -18,9 +18,9 @@ CC=cc
 ###############################################################################
 ## SOURCES 
 
-SRC_DIR=/Users/nige42/Documents/42-curus/libft/
-OBJ_DIR=/Users/nige42/Documents/42-curus/libft/
-BONUS_DIR=/Users/nige42/Documents/42-curus/libft/
+SRC_DIR=../libft/
+OBJ_DIR=../libft/
+BONUS_DIR=../libft/
 INCLUDE=
 SRC=ft_putchar.c ft_putstr.c ft_putchar_fd.c
 SRC+=ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
@@ -53,16 +53,19 @@ $(OBJ):
 	$(CC) $(CFLAGS) $(CCOPTIONS) $(MAIN_SRC).c -I$(HEAD) -o $(MAIN_OBJ).o
 
 bonus:
-
+	@echo "\nCOMPILE all c files to .o FILES .......\n"
 	$(CC) $(CFLAGS) $(CCOPTIONS) $(SRCS) -I $(HEAD)
 	$(CC) $(CFLAGS) $(CCOPTIONS) bonus_main.c -I $(HEAD) -o $(MAIN_OBJ).o
 	$(CC) $(CFLAGS) $(CCOPTIONS) $(BONUS_SRC) -I $(HEAD)
+	@echo "\nCreating Libft.a FILE .......\n"
 	ar -rcs $(EXEC) $(OBJ) $(BONUS_OBJ)
+	@echo "\nlinking FILES .......\n"
 	cc $(OBJ) $(BONUS_OBJ) $(MAIN_OBJ).o -o $(NAME)
+	@echo "\nDone ! avec bonus functions ......\n"
 	
 so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BONUS)
+	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BONUS)
 
 clean:
 	rm -f $(SRC_OBJ) $(MAIN_OBJ).o $(BONUS_OBJ)
