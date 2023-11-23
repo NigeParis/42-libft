@@ -31,7 +31,7 @@ SRC+=ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c
 SRC+=ft_memcmp.c ft_strnstr.c ft_atoi.c ft_isspace.c ft_calloc.c
 SRC+=ft_strdup.c ft_memccpy.c ft_substr.c ft_strjoin.c ft_strtrim.c
 SRC+=ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c
-BONUS=ft_lstnew_bonus.c
+BONUS=ft_lstnew_bonus.c ft_lstadd_front.c
 HEADER=libft.h
 MAIN=main_test
 
@@ -49,14 +49,14 @@ $(NAME): $(OBJ)
 	cc $(OBJ) $(MAIN_OBJ).o -o $(NAME)
 $(OBJ):
 	@echo "\nCOMPILE all c files to .o FILES .......\n"
-	$(CC) $(CFLAGS) $(CCOPTIONS) $(SRCS) -I $(HEAD)
-	$(CC) $(CFLAGS) $(CCOPTIONS) $(MAIN_SRC).c -I$(HEAD) -o $(MAIN_OBJ).o
+	$(CC) $(CFLAGS) $(CCOPTIONS) $(SRCS) -I./$(HEAD)
+	$(CC) $(CFLAGS) $(CCOPTIONS) $(MAIN_SRC).c -I./$(HEAD) -o $(MAIN_OBJ).o
 
 bonus:
 	@echo "\nCOMPILE all c files to .o FILES .......\n"
 	$(CC) $(CFLAGS) $(CCOPTIONS) $(SRCS) -I $(HEAD)
-	$(CC) $(CFLAGS) $(CCOPTIONS) bonus_main.c -I $(HEAD) -o $(MAIN_OBJ).o
-	$(CC) $(CFLAGS) $(CCOPTIONS) $(BONUS_SRC) -I $(HEAD)
+	$(CC) $(CFLAGS) $(CCOPTIONS) bonus_main.c -I./$(HEAD) -o $(MAIN_OBJ).o
+	$(CC) $(CFLAGS) $(CCOPTIONS) $(BONUS_SRC) -I./$(HEAD)
 	@echo "\nCreating Libft.a FILE .......\n"
 	ar -rcs $(EXEC) $(OBJ) $(BONUS_OBJ)
 	@echo "\nlinking FILES .......\n"
