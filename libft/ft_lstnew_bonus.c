@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:31:01 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/20 15:12:11 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/23 08:18:02 by nige42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -33,7 +33,7 @@
 **/
 
 #include "libft.h"
-
+/**
 t_list *ft_lstnew(void *content)
 {
 	t_list *ptr;
@@ -42,10 +42,14 @@ t_list *ft_lstnew(void *content)
 
 
 }
+*/
 
+void ft_test(void)
+{
 
+	ft_putstr("helloword");
 
-
+}
 
 
 

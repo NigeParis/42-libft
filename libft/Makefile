@@ -7,17 +7,20 @@ CFLAGS=-Wall -Wextra -Werror
 SRCS=$(addprefix $(SRC_DIR), $(SRC))
 OBJ=$(SRC:.c=.o)
 HEAD=$(addprefix $(INCLUDE), $(HEADER))
-CC=cc
 CCOPTIONS=-c -g
 MAIN_SRC=$(addprefix $(SRC_DIR), $(MAIN))
 MAIN_OBJ=$(addprefix $(OBJ_DIR), $(MAIN))
 SRC_OBJ=$(addprefix $(OBJ_DIR), $(OBJ))
+BONUS_SRC=$(addprefix $(BONUS_DIR), $(BONUS))
+BONUS_OBJ=$(addprefix $(BONUS_DIR), $(BONUS:.c=.o))
+CC=cc
 
 ###############################################################################
 ## SOURCES 
 
-SRC_DIR=/home/nrobinso/Documents/42-curus/libft/
-OBJ_DIR=/home/nrobinso/Documents/42-curus/libft/
+SRC_DIR=/Users/nige42/Documents/42-curus/libft/
+OBJ_DIR=/Users/nige42/Documents/42-curus/libft/
+BONUS_DIR=/Users/nige42/Documents/42-curus/libft/
 INCLUDE=
 SRC=ft_putchar.c ft_putstr.c ft_putchar_fd.c
 SRC+=ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
@@ -28,6 +31,7 @@ SRC+=ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c
 SRC+=ft_memcmp.c ft_strnstr.c ft_atoi.c ft_isspace.c ft_calloc.c
 SRC+=ft_strdup.c ft_memccpy.c ft_substr.c ft_strjoin.c ft_strtrim.c
 SRC+=ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c
+BONUS=ft_lstnew_bonus.c
 HEADER=libft.h
 MAIN=main_test
 
@@ -47,12 +51,21 @@ $(OBJ):
 	@echo "\nCOMPILE all c files to .o FILES .......\n"
 	$(CC) $(CFLAGS) $(CCOPTIONS) $(SRCS) -I $(HEAD)
 	$(CC) $(CFLAGS) $(CCOPTIONS) $(MAIN_SRC).c -I$(HEAD) -o $(MAIN_OBJ).o
+
+bonus:
+
+	$(CC) $(CFLAGS) $(CCOPTIONS) $(SRCS) -I $(HEAD)
+	$(CC) $(CFLAGS) $(CCOPTIONS) bonus_main.c -I $(HEAD) -o $(MAIN_OBJ).o
+	$(CC) $(CFLAGS) $(CCOPTIONS) $(BONUS_SRC) -I $(HEAD)
+	ar -rcs $(EXEC) $(OBJ) $(BONUS_OBJ)
+	cc $(OBJ) $(BONUS_OBJ) $(MAIN_OBJ).o -o $(NAME)
+	
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
 	gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 clean:
-	rm -f $(SRC_OBJ) $(MAIN_OBJ).o *.o
+	rm -f $(SRC_OBJ) $(MAIN_OBJ).o $(BONUS_OBJ)
 
 fclean:clean
 	@echo "\nFCLEAN all .o et .a files .......\n"
@@ -61,4 +74,4 @@ fclean:clean
 re:fclean all
 	@echo "\nAll erased and re compiled .......\n"
 
-.PHONY: all clean fclean re 
+.PHONY: all clean fclean re bonus
