@@ -6,7 +6,7 @@
 /*   By: nige42 <Nige@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 09:11:41 by nige42            #+#    #+#             */
-/*   Updated: 2023/11/24 16:42:49 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/24 23:06:56 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,15 @@ void	del(void *ptr)
 	ptr1 = (char *)ptr;
 
 	*ptr1 = '\0';
+}
+
+void	f(void *ptr)
+{
+	char *ptr1;
+	
+	ptr1 = (char *)ptr;
+	*ptr1 = *ptr1 + 1;
+
 }
 
 
@@ -62,7 +71,7 @@ int	main(void)
 		tmp = tmp->next;
 	}
 
-	tmp = ptr0;
+	tmp = ptr3;
 	printf("\n\nlast....: %s", (char *)(tmp - ft_lstsize(ptr0)) -> content);
 	printf("\nnext... : %p\n", tmp -> next);
 
@@ -71,16 +80,28 @@ int	main(void)
 
 
 
-	ft_lstclear(&ptr1, &del);
+	ft_lstclear(&ptr3, &del);
 
-
-	tmp = ptr2;
+	tmp = ptr1;
 	while (tmp)
 	{
 		printf("\ncontenu : %s", (char *)tmp->content);
 		printf("\nnext... : %p", tmp->next);
 		tmp = tmp->next;
 	}
+
+
+	ft_lstiter(ptr1, &f);
+	tmp = ptr1;
+	while (tmp)
+	{
+		printf("\ncontenu : %s", (char *)tmp->content);
+		printf("\nnext... : %p", tmp->next);
+		tmp = tmp->next;
+	}
+
+	ft_lstclear(&ptr3, &del);
+
 
 	return (0);
 

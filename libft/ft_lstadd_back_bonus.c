@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 11:44:35 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/24 13:47:35 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/24 23:31:19 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -34,7 +34,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	if (*lst == NULL)
 	{
-		*lst = new;	
+		*lst = new;
 		return ;
 	}
 	tmp = ft_lstlast(*lst);
