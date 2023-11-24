@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 14:48:22 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/23 15:46:36 by nrobinso         ###   ########.fr       */
+/*   Created: 2023/11/24 10:16:35 by nrobinso          #+#    #+#             */
+/*   Updated: 2023/11/24 14:50:46 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+* ft_lstlast
+*
+* t_list *ft_lstlast(t_list *lst);
+*
+* Description: Returns the last node of the list.
+*
+* Parameters: lst: The beginning of the list.
+*
+* Return value: Last node of the list
+*
+**/
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (!new)
-		return ;
-	new->next = *lst;
-	*lst = new;
+	if (lst == NULL)
+		return (0);
+	while (lst -> next)
+	{
+		lst = lst -> next;
+	}
+	return(lst);
 }
-
-/*
-new->next = *lst;
-	->>>   new--->link-->*lst--->link-->NULL
-**lst
-	*lst = new	*lst-->link-->old *lst
-
-*/
