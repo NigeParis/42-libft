@@ -69,15 +69,15 @@ tester - T = tripouille <br>
 
 ### Linked Lists
 
-| G | U | T | Functions  |
-|---|---|--|-----------|
-|   | X |  | [`ft_lstnew`](/libft/ft_lstnew_bonus.c)  | t\_list \*ft\_lstnew(void \*content); |
-|   | X |  | [`ft_lstadd_front`](/libft/ft_lstadd_front_bonus.c)  | void ft\_lstadd\_front(t\_list \*\*lst, t\_list \*new);|
-|   | X |  | [`ft_lstsize`](/libft/ft_lstsize_bonus.c)  | int ft\_lstsize(t\_list \*lst);|
-|   | X |  | [`ft_lstlast`](/libft/ft_lstlast_bonus.c)  | t\_list \*ft\_lstlast(t\_list \*lst);|
-|   | X |  | [`ft_lstadd_back`](/libft/ft_lstadd_back_bonus.c)  |void ft\_lstadd\_back(t\_list \*\*lst, t\_list \*new);|
-|   | X |  | [`ft_lstdelone`](/libft/ft_lstdelone_bonus.c)  | void ft\_lstdelone(t\_list \*lst, void (\*del)(void\*)); |
-|   | X |  | [`ft_lstclear`](/libft/ft_lstclear_bonus.c)  | void ft\_lstclear(t\_list \*\*lst, void (\*del)(void\*));|
-|   | X |  | [`ft_lstiter`](/libft/ft_lstiter_bonus.c)  | void ft\_lstiter(t\_list \*lst, void (\*f)(void \*));|
-|   | X |  | [`ft_lstmap`](/libft/ft_lstmap_bonus.c)  | t\_list \*ft\_lstmap(t\_list \*lst, void \*(\*f)(void \*), void (\*del)(void \*));
+| G | U | T | Functions| Prototypes                    |  |
+|---|---|---|-----------|----------------------------- |
+|   | X |   | [`ft_lstnew`](/libft/ft_lstnew_bonus.c)  | t\_list \*ft\_lstnew(void \*content); |
+|   | X |   | [`ft_lstadd_front`](/libft/ft_lstadd_front_bonus.c)  | void ft\_lstadd\_front(t\_list \*\*lst, t\_list \*new);|
+|   | X |   | [`ft_lstsize`](/libft/ft_lstsize_bonus.c)  | int ft\_lstsize(t\_list \*lst);|
+|   | X |   | [`ft_lstlast`](/libft/ft_lstlast_bonus.c)  | t\_list \*ft\_lstlast(t\_list \*lst);|
+|   | X |   | [`ft_lstadd_back`](/libft/ft_lstadd_back_bonus.c)  |void ft\_lstadd\_back(t\_list \*\*lst, t\_list \*new);|
+|   | X |   | [`ft_lstdelone`](/libft/ft_lstdelone_bonus.c)  | void ft\_lstdelone(t\_list \*lst, void (\*del)(void\*)); |
+|   | X |   | [`ft_lstclear`](/libft/ft_lstclear_bonus.c)  | void ft\_lstclear(t\_list \*\*lst, void (\*del)(void\*));|
+|   | X |   | [`ft_lstiter`](/libft/ft_lstiter_bonus.c)  | void ft\_lstiter(t\_list \*lst, void (\*f)(void \*));|
+|   | X |   | [`ft_lstmap`](/libft/ft_lstmap_bonus.c)  | t\_list \*ft\_lstmap(t\_list \*lst, void \*(\*f)(void \*), void (\*del)(void \*)) |;
 
