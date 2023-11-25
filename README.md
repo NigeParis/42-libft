@@ -69,8 +69,8 @@ tester - T = tripouille <br>
 
 ### Linked Lists
 
-| G | U | T | Functions| Prototypes                    |  |
-|---|---|---|-----------|----------------------------- |
+| G | U | T | Functions    | Prototypes                    |  |
+|---|---|---|-----------|--|--------------------------|
 |   | X |   | [`ft_lstnew`](/libft/ft_lstnew_bonus.c)  | t\_list \*ft\_lstnew(void \*content); |
 |   | X |   | [`ft_lstadd_front`](/libft/ft_lstadd_front_bonus.c)  | void ft\_lstadd\_front(t\_list \*\*lst, t\_list \*new);|
 |   | X |   | [`ft_lstsize`](/libft/ft_lstsize_bonus.c)  | int ft\_lstsize(t\_list \*lst);|
