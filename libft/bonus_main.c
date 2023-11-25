@@ -6,7 +6,7 @@
 /*   By: nige42 <Nige@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 09:11:41 by nige42            #+#    #+#             */
-/*   Updated: 2023/11/24 23:06:56 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/25 11:18:49 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,15 @@ void	f(void *ptr)
 	*ptr1 = *ptr1 + 1;
 
 }
+void	*fun(void *ptr)
+{
+	char *ptr1;
+	
+	ptr1 = (char *)ptr;
+	*ptr1 = *ptr1 + 1;
 
+	return (ptr1);
+}
 
 int	main(void)
 {
@@ -38,6 +46,7 @@ int	main(void)
 	t_list	*ptr1;
 	t_list	*ptr2;
 	t_list	*ptr3;
+	t_list	*new_lst = NULL;
 	char 	str0[] = "Hello";
 	char 	str1[] = "World";
 	char 	str2[] = "Again";
@@ -49,20 +58,11 @@ int	main(void)
 	ptr2 = ft_lstnew(str2);
 	ptr3 = ft_lstnew(str3);
 
-/*	printf("\ncontenu : %s", (char *)ptr->content);
-	printf("\nnext... : %p", (char *)ptr->next);
-	printf("\ncontenu : %s", (char *)new->content);
-	printf("\nnext... : %p", (char *)new->next);
-*/	
 	ft_lstadd_front(&ptr0, ptr1);
 	ft_lstadd_front(&ptr1, ptr2);
-	lstsize = ft_lstsize(ptr1);
+	lstsize = ft_lstsize(ptr2);
 
 	t_list *tmp = ptr2;
-
-	ft_lstadd_back(&ptr0, ptr3);
-
-	printf("\nsize is : %d", lstsize);
 	printf("\nprinting the full list...\n");
 	while (tmp)
 	{
@@ -71,16 +71,33 @@ int	main(void)
 		tmp = tmp->next;
 	}
 
+	printf("\n");
+	ft_lstadd_back(&ptr0, ptr3);
+
+	lstsize = ft_lstsize(ptr2);
+	printf("\nlstadd_back...`Nigel`\n");
+	printf("\nsize iof list is : %d", lstsize);
+
+	printf("\nprinting the full list...\n");
+	tmp = ptr2;
+	while (tmp)
+	{
+		printf("\ncontenu : %s", (char *)tmp->content);
+		printf("\nnext... : %p", tmp->next);
+		tmp = tmp->next;
+	}
+
 	tmp = ptr3;
-	printf("\n\nlast....: %s", (char *)(tmp - ft_lstsize(ptr0)) -> content);
+	printf("\n\nlast....: %s", (char *)tmp -> content);
 	printf("\nnext... : %p\n", tmp -> next);
+
+	tmp = ft_lstlast(ptr0);
 
 	printf("\nlstlast : %s", (char *)tmp -> content);
 	printf("\nnext... : %p\n", tmp -> next);
 
 
 
-	ft_lstclear(&ptr3, &del);
 
 	tmp = ptr1;
 	while (tmp)
@@ -90,7 +107,7 @@ int	main(void)
 		tmp = tmp->next;
 	}
 
-
+	printf("\n");
 	ft_lstiter(ptr1, &f);
 	tmp = ptr1;
 	while (tmp)
@@ -100,7 +117,46 @@ int	main(void)
 		tmp = tmp->next;
 	}
 
-	ft_lstclear(&ptr3, &del);
+	printf("\n");
+
+	printf("\n ------- new list");
+
+	new_lst = ft_lstmap(ptr1, &fun, &del);
+
+	while (new_lst)
+	{
+		printf("\ncontenu : %s", (char *)new_lst->content);
+		printf("\nnext... : %p", new_lst->next);
+		new_lst = new_lst->next;
+	}
+
+
+	printf("\n");
+	ft_lstdelone(ptr1, &del);
+
+	printf("\nft_lstdelone()...\n");
+	tmp = ptr0;
+	while (tmp)
+	{
+		printf("\ncontenu : %s", (char *)tmp->content);
+		printf("\nnext... : %p", tmp->next);
+		tmp = tmp->next;
+	}
+
+		
+	ft_lstclear(&ptr0, &del);
+
+	printf("\n");
+	printf("\nft_lstclear()...\n");
+
+	tmp = ptr0;
+	while (tmp)
+	{
+		printf("\ncontenu : %s", (char *)tmp->content);
+		printf("\nnext... : %p", tmp->next);
+		tmp = tmp->next;
+	}
+
 
 
 	return (0);
