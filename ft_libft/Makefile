@@ -15,10 +15,10 @@ CC=cc
 ###############################################################################
 ## SOURCES 
 
-SRC_DIR=../ft_libft/
-OBJ_DIR=../ft_libft/
-BONUS_DIR=../ft_libft/
-INCLUDE=../ft_libft/
+SRC_DIR=
+OBJ_DIR=
+BONUS_DIR=
+INCLUDE=
 SRC=ft_putchar_fd.c
 SRC+=ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 SRC+=ft_isalpha.c ft_isdigit.c ft_isalnum.c
@@ -48,7 +48,7 @@ $(OBJ):
 
 bonus:
 	@echo "\nCOMPILE all c files to .o FILES .......\n"
-	$(CC) $(CFLAGS) $(CCOPTIONS) $(SRCS) -I $(HEAD)
+	$(CC) $(CFLAGS) $(CCOPTIONS) $(SRCS) -I./$(HEAD)
 	$(CC) $(CFLAGS) $(CCOPTIONS) $(BONUS_SRC) -I./$(HEAD)
 	@echo "\nCreating Libft.a FILE .......\n"
 	ar -rcs $(NAME) $(OBJ) $(BONUS_OBJ)

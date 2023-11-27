@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 11:52:56 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/25 15:20:47 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/27 08:35:31 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <stdint.h>
 
-typedef struct s_list  
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
