@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:34:43 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/22 15:37:23 by nrobinso         ###   ########.fr       */
+/*   Updated: 2023/11/28 20:21:43 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /**
@@ -43,7 +43,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	strsize = ft_strlen(s);
-	if ((start > len) || (len == 0) || (start > strsize))
+	if (start > strsize)
 		return (ft_strdup(""));
 	if (len > strsize)
 		len = strsize;
