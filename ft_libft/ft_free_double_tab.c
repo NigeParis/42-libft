@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_free_double_tab.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/19 15:53:22 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/24 10:59:37 by nrobinso         ###   ########.fr       */
+/*   Created: 2024/03/15 09:35:06 by nrobinso          #+#    #+#             */
+/*   Updated: 2024/03/15 10:06:23 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putchar(int c)
+void	ft_free_double_tab(char *tab[])
 {
-	unsigned char	*ptr;
-	unsigned char	ch;
+	int	y;
 
-	ch = (unsigned char)c;
-	ptr = &ch;
-	write (1, ptr, 1);
-	return (c);
+	y = 0;
+	while (tab[y])
+	{
+		free(tab[y]);
+		y++;
+	}
+	if (tab)
+		free (tab);
 }

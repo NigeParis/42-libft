@@ -27,7 +27,7 @@ SRC+=ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c
 SRC+=ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c
 SRC+=ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c
 SRC+=ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c
-SRC+=ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c
+SRC+=ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_free_double_tab.c
 
 BONUS=ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c
 BONUS+=ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c
