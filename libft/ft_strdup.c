@@ -6,9 +6,10 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:34:39 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/22 10:34:01 by nrobinso         ###   ########.fr       */
+/*   Updated: 2024/03/29 15:26:17 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 /**
 * #include <string.h>
 *
@@ -28,14 +29,19 @@
 char	*ft_strdup(const char *s1)
 {
 	char	*str;
-	char	*to_copy;
-	size_t	size;
+	int		i;
 
-	to_copy = (char *)s1;
-	size = ft_strlen(s1);
-	str = (char *)ft_calloc(size + 1, sizeof(char));
+	i = 0;
+	if (!s1 || !s1[0])
+		return (NULL);
+	str = (char *)ft_calloc(ft_strlen(s1) + 1, sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	ft_strlcpy(str, to_copy, size + 1);
+	while (s1[i])
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	str[i] = 0;
 	return (str);
 }

@@ -6,11 +6,11 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 21:56:57 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/12 13:40:30 by nrobinso         ###   ########.fr       */
+/*   Updated: 2024/04/06 09:04:04 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/**
-*  #include <string.h>
+
+/**  #include <string.h>
 * strlen - size_t strlen(const char *s);
 *
 * The strlen() function computes the length of the string s.  
@@ -28,12 +28,16 @@
 size_t	ft_strlen(const char *s)
 {
 	size_t	len;
+	size_t	i;
 
 	len = 0;
-	while (*s)
+	i = 0;
+	if (!s)
+		return (0);
+	while (s && s[i])
 	{
 		len++;
-		s++;
+		i++;
 	}
 	return (len);
 }

@@ -6,9 +6,10 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 16:07:12 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/19 16:07:18 by nrobinso         ###   ########.fr       */
+/*   Updated: 2024/04/06 12:32:37 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 /**
 * #include <string.h>
 *
@@ -78,7 +79,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		return (len);
 	if (len == 0)
 		*dest = '\0';
-	if (dstsize < 1 || len < 2)
+	if (dstsize < 1 || len < 1)
 		return (len);
 	while (i < dstsize - 1 && tocopy[i] != '\0')
 	{

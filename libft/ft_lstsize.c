@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/24 16:29:26 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/24 23:29:56 by nrobinso         ###   ########.fr       */
+/*   Created: 2023/11/24 09:41:56 by nrobinso          #+#    #+#             */
+/*   Updated: 2024/04/12 08:54:43 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/** ft_lstsize
+*
+* int ft_lstsize(t_list *lst);
+*
+* Description: Counts the number of nodes in a list
+*
+* Parameters : lst: The beginning of the list.
+*
+* Note : while(lst) - work because lst -> next adresse exists 
+*                                         (no need to increment)
+**/
+
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*tmp;
-	t_list	*swap;
+	int	size;
 
-	if (!lst || !del)
-		return ;
-	tmp = *lst;
-	while (tmp)
+	if (lst == NULL)
+		return (0);
+	size = 0;
+	while (lst)
 	{
-		swap = tmp -> next;
-		ft_lstdelone(tmp, del);
-		tmp = swap;
+		lst = lst -> next;
+		size++;
 	}
-	*lst = NULL;
+	return (size);
 }

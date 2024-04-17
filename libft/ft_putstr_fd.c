@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 16:05:27 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/22 12:06:42 by nrobinso         ###   ########.fr       */
+/*   Updated: 2024/04/05 15:08:10 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,5 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	if ((!s) || (fd < 0))
 		return ;
-	while (*s)
-	{
-		ft_putchar_fd(*s, fd);
-		s++;
-	}
+	write(fd, s, ft_strlen(s));
 }

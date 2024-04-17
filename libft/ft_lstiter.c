@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/24 09:41:56 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/24 23:27:48 by nrobinso         ###   ########.fr       */
+/*   Created: 2023/11/24 22:20:56 by nrobinso          #+#    #+#             */
+/*   Updated: 2024/04/12 08:56:02 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 /**
-* ft_lstsize
+* ft_lstiter
 *
-* int ft_lstsize(t_list *lst);
+* void ft_lstiter(t_list *lst, void (*f)(void *));
 *
-* Description: Counts the number of nodes in a list
+* Description
+* Iterates the list ’lst’ and applies the function ’f’ on the content 
+* of each node.
 *
-* Parameters : lst: The beginning of the list.
-*
-* Note : while(lst) - work because lst -> next adresse exists 
-*                                         (no need to increment)
+* Parameters
+*            lst:  The address of a pointer to a node.
+*              f:  The address of the function used to iterate on the list.
 **/
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int	size;
-
-	if (lst == NULL)
-		return (0);
-	size = 0;
-	while (lst)
+	while (lst != NULL)
 	{
+		f(lst -> content);
 		lst = lst -> next;
-		size++;
 	}
-	return (size);
 }

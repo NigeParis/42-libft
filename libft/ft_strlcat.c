@@ -6,11 +6,11 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 17:15:20 by nrobinso          #+#    #+#             */
-/*   Updated: 2023/11/12 16:33:38 by nrobinso         ###   ########.fr       */
+/*   Updated: 2024/04/06 12:32:15 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/**
-* #include <string.h>
+
+/* #include <string.h>
 *
 * strlcat
 *

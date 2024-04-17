@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_double_tab.c                               :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 09:35:06 by nrobinso          #+#    #+#             */
-/*   Updated: 2024/04/01 16:54:56 by nrobinso         ###   ########.fr       */
+/*   Created: 2023/11/24 16:29:26 by nrobinso          #+#    #+#             */
+/*   Updated: 2024/04/12 08:56:41 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_double_tab(char *tab[])
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	int	y;
+	t_list	*tmp;
+	t_list	*swap;
 
-	y = 0;
-	while (tab && tab[y])
+	if (!lst || !del)
+		return ;
+	tmp = *lst;
+	while (tmp)
 	{
-		free(tab[y]);
-		y++;
+		swap = tmp -> next;
+		ft_lstdelone(tmp, del);
+		tmp = swap;
 	}
-	if (tab)
-		return (free(tab));
+	*lst = NULL;
 }
