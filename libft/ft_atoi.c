@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 22:14:01 by nrobinso          #+#    #+#             */
-/*   Updated: 2024/04/17 20:35:12 by nrobinso         ###   ########.fr       */
+/*   Updated: 2024/04/17 20:43:48 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	ft_atoi(const char *str)
 		result = result * 10;
 	}
 	result = result / 10;
-	return (result * neg);
+	return ((int)result * neg);
 }
 
 static int	ft_isspace(int c)
