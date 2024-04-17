@@ -37,6 +37,7 @@ tester - T = tripouille <br>
 | X | X | X | [`ft_strrchr`](/libft/ft_strrchr.c)  | char \*ft\_strrchr(const char \*s, int c) |
 | X | X | X | [`ft_calloc`](/libft/ft_calloc.c)  | void	\*ft\_calloc(size\_t count, size\_t size) |
 | X | X | X | [`ft_atoi`](/libft/ft_atoi.c)  | int	ft\_atoi(const char \*str) |
+| - | - | - | [`ft_atol`](/libft/ft_atol.c)  | long int	ft\_atol(const char \*str) |
 | X | X | X | [`ft_strlcpy`](/libft/ft_strlcpy.c)  | size\_t	ft\_strlcpy(char \*dst, const char \*src, size\_t dstsize) |
 | X | X | X | [`ft_strdup`](/libft/ft_strdup.c) | char	\*ft\_strdup(const char \*s1) |
 | X | X | X | [`ft_memcpy`](/libft/ft_memcpy.c)  | void	\*ft\_memcpy(void \*dest, const void \*src, size\_t n) |
