@@ -26,7 +26,7 @@ tester - T = tripouille <br>
 | X | X | X | [`ft_isalpha`](/libft/ft_isalpha.c)  | int ft\_isalpha(int c) |
 | X | X | X | [`ft_isdigit`](/libft/ft_isdigit.c)  | int ft\_isdigit(int c) |
 | X | X | X | [`ft_isalnum`](/libft/ft_isalnum.c)  | int ft\_isalnum(int c) |
-| X | X | X | [`ft_isascii`](/libft/ft_isascii.c)  | int ft\_isascii(int c) |
+| X | X | X | [`ft_isascii`](/libft/ft_isascii.c)  | int ft\_isascii(int c) |https://profile.intra.42.fr/
 | X | X | X | [`ft_isprint`](/libft/ft_isprint.c)  | int ft\_isprint(int c) |
 | X | X | X | [`ft_toupper`](/libft/ft_toupper.c)  | int ft\_toupper(int c) |
 | X | X | X | [`ft_tolower`](/libft/ft_tolower.c)  | int ft\_islower(int c) |
@@ -80,5 +80,5 @@ tester - T = tripouille <br>
 | X | X | X | [`ft_lstdelone`](/libft/ft_lstdelone_bonus.c)  | void ft\_lstdelone(t\_list \*lst, void (\*del)(void\*)); |
 | X | X | X | [`ft_lstclear`](/libft/ft_lstclear_bonus.c)  | void ft\_lstclear(t\_list \*\*lst, void (\*del)(void\*));|
 | X | X | X | [`ft_lstiter`](/libft/ft_lstiter_bonus.c)  | void ft\_lstiter(t\_list \*lst, void (\*f)(void \*));|
-| X | X | X | [`ft_lstmap`](/libft/ft_lstmap_bonus.c)  | t\_list \*ft\_lstmap(t\_list \*lst, void \*(\*f)(void \*), void (\*del)(void \*)) |;
+| X | X | X | [`ft_lstmap`](/libft/ft_lstmap_bonus.c)  | t\_list \*ft\_lstmap(t\_list \*lst, void \*(\*f)(void \*), void (\*del)(void \*)); |
 
