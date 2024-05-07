@@ -26,7 +26,7 @@ tester - T = tripouille <br>
 | X | X | X | [`ft_isalpha`](/libft/ft_isalpha.c)  | int ft\_isalpha(int c) |
 | X | X | X | [`ft_isdigit`](/libft/ft_isdigit.c)  | int ft\_isdigit(int c) |
 | X | X | X | [`ft_isalnum`](/libft/ft_isalnum.c)  | int ft\_isalnum(int c) |
-| X | X | X | [`ft_isascii`](/libft/ft_isascii.c)  | int ft\_isascii(int c) |https://profile.intra.42.fr/
+| X | X | X | [`ft_isascii`](/libft/ft_isascii.c)  | int ft\_isascii(int c) |
 | X | X | X | [`ft_isprint`](/libft/ft_isprint.c)  | int ft\_isprint(int c) |
 | X | X | X | [`ft_toupper`](/libft/ft_toupper.c)  | int ft\_toupper(int c) |
 | X | X | X | [`ft_tolower`](/libft/ft_tolower.c)  | int ft\_islower(int c) |
