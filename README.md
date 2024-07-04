@@ -72,7 +72,7 @@ tester - T = tripouille <br>
 
 | G | U | T | Functions    | Prototypes                    |  |
 |---|---|---|-----------|--|--------------------------|
-| X | X | X | [`ft_lstnew`](/libft/ft_lstnew_bonus.c)  | t\_list \*ft\_lstnew(void \*content); |
+| X | X | X | [`ft_lstnew`](/libft/ft_lstnew.c)  | t\_list \*ft\_lstnew(void \*content); |
 | X | X | X | [`ft_lstadd_front`](/libft/ft_lstadd_front_bonus.c)  | void ft\_lstadd\_front(t\_list \*\*lst, t\_list \*new);|
 | X | X | X | [`ft_lstsize`](/libft/ft_lstsize_bonus.c)  | int ft\_lstsize(t\_list \*lst);|
 | X | X | X | [`ft_lstlast`](/libft/ft_lstlast_bonus.c)  | t\_list \*ft\_lstlast(t\_list \*lst);|
